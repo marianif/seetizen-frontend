@@ -1,0 +1,135 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.container h3 {
+  font-family: Bebas Neue;
+  font-size: 4.5vw;
+  letter-spacing: 0;
+  margin: 0;
+  line-height: 0.5;
+}
+
+.container p {
+  font-size: 1.5vw;
+  /* background-color: aliceblue; */
+}
+
+.innerBottom {
+  border-top: solid 1px rgb(88, 88, 88);
+  height: 10vh;
+  position: absolute;
+  bottom: 1vh;
+}
+
+.innerBottom p {
+  font-size: 1.2vw;
+}
+
+.innerBottom a {
+  color: white;
+  text-decoration: underline;
+}
+
+.formContainer {
+  width: 45%;
+  /* height: vh; */
+  background: rgb(34, 34, 34);
+  /* box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0); */
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  padding: 3vw;
+}
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.formContainer span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.formContainer form input {
+  height: 3vh;
+  margin: 1.5vh 0;
+  border-radius: 10px;
+  background: #1111;
+  padding: 4% 5%;
+  border: 1px solid rgb(192, 192, 192);
+  color: white;
+  font-size: 1em;
+}
+
+.formContainer form input:focus {
+  background: rgba(112, 112, 112, 0.067);
+}
+
+.formContainer button {
+  width: 100%;
+  margin-top: 2vh;
+}
+
+.formContainer button:hover {
+  border: 1px solid white;
+}
+
+/* When the browser is at least 768px and below */
+@media screen and (max-width: 768px) {
+  .background {
+    display: none;
+  }
+  .leftContainer {
+    display: none;
+  }
+
+  .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: space-around;
+  }
+
+  .descriptionContainer span {
+    width: 100%;
+    text-align: center;
+  }
+
+  .formContainer {
+    width: 100%;
+  }
+
+  .formContainer span {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formContainer form input {
+    flex: 1;
+    flex-shrink: 1;
+    height: 6vh;
+    width: 60vw;
+    margin: 1vh 1vw;
+    background: #1111;
+    padding: 5%;
+  }
+
+  .formContainer button {
+    width: 60vw;
+  }
+}

@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  background: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 0;
+}
+
+.container span {
+  color: rgb(109, 109, 109);
+}
+
+.links {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.links a {
+  color: rgb(109, 109, 109);
+}
+
+/* When the browser is at least 600px and above */
+@media screen and (max-width: 768px) {
+  .links {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+  }
+
+  .links a {
+    margin: 5px 0;
+    font-size: 0.9em;
+  }
+}

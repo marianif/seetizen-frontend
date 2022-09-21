@@ -1,0 +1,22 @@
+.container {
+  width: 25%;
+  height: auto;
+  background-color: whitesmoke;
+  position: absolute;
+  z-index: 99;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin-top: 5px;
+  border: 1px rgb(207, 207, 207) solid;
+  overflow: hidden;
+}
+
+.placeContainer {
+  border-radius: 0;
+  /* width: 90%; */
+  max-width: 90%;
+  border: 0;
+  background-color: inherit;
+  padding-left: 5%;
+  cursor: pointer;
+}

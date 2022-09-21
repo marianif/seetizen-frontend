@@ -1,0 +1,19 @@
+## [Start] Set query expression for key **
+#if( !$util.isNull($ctx.args.sortDirection) )
+  $util.error("sortDirection is not supported for List operations without a Sort key defined.", "InvalidArgumentsError")
+#end
+#set( $modelQueryExpression = {} )
+#if( !$util.isNull($ctx.args.phoneNumber) )
+  #set( $modelQueryExpression.expression = "#phoneNumber = :phoneNumber" )
+  #set( $modelQueryExpression.expressionNames = {
+  "#phoneNumber": "phoneNumber"
+} )
+  #set( $modelQueryExpression.expressionValues = {
+  ":phoneNumber": {
+      "S": "$ctx.args.phoneNumber"
+  }
+} )
+#end
+## [End] Set query expression for key **
+$util.qr($ctx.stash.put("modelQueryExpression", $modelQueryExpression))
+{}

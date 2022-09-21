@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #090909;
+  position: fixed;
+  padding: 0 10%;
+}
+
+.logoContainer {
+  position: relative;
+  width: 8vw;
+  /* aspect-ratio: 3.5; */
+  object-fit: contain;
+  overflow: hidden;
+  padding: 5vh 0 5vh 0;
+  cursor: pointer;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .logoContainer {
+    width: 25vw;
+  }
+}

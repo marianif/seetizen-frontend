@@ -1,0 +1,59 @@
+[
+  {
+    "img": "/../public/images/hero.png",
+    "heading": "Mappa Sociale",
+    "label": "Mapping | the right way",
+    "previews": [
+      {
+        "heading": "Edge on Localhost",
+        "paragraph": "Connect your pages to any data source, headless CMS, or API and make it work in everyone’s dev environment."
+      },
+      {
+        "heading": "Edge on Localhost",
+        "paragraph": "Connect your pages to any data source, headless CMS, or API and make it work in everyone’s dev environment."
+      },
+      {
+        "heading": "Edge on Localhost",
+        "paragraph": "Connect your pages to any data source, headless CMS, or API and make it work in everyone’s dev environment."
+      }
+    ]
+  },
+  {
+    "img": "/../public/images/hero.png",
+    "heading": "News Showcase",
+    "label": "News | the useful way",
+    "previews": [
+      {
+        "heading": "Edge on Localhost",
+        "paragraph": "Connect your pages to any data source, headless CMS, or API and make it work in everyone’s dev environment."
+      },
+      {
+        "heading": "Edge on Localhost",
+        "paragraph": "Connect your pages to any data source, headless CMS, or API and make it work in everyone’s dev environment."
+      },
+      {
+        "heading": "Edge on Localhost",
+        "paragraph": "Connect your pages to any data source, headless CMS, or API and make it work in everyone’s dev environment."
+      }
+    ]
+  },
+  {
+    "img": "/../public/images/hero.png",
+    "heading": "La ricerca semplice",
+    "label": "Search | the easy way",
+    "previews": [
+      {
+        "heading": "Edge on Localhost",
+        "paragraph": "Connect your pages to any data source, headless CMS, or API and make it work in everyone’s dev environment."
+      },
+      {
+        "heading": "Edge on Localhost",
+        "paragraph": "Connect your pages to any data source, headless CMS, or API and make it work in everyone’s dev environment."
+      },
+      {
+        "heading": "Edge on Localhost",
+        "paragraph": "Connect your pages to any data source, headless CMS, or API and make it work in everyone’s dev environment."
+      }
+    ]
+  }
+]

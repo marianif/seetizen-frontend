@@ -1,0 +1,22 @@
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.container p {
+  font-size: 1.5em;
+  font-weight: lighter;
+  flex: 1;
+  text-align: center;
+}
+
+.container span {
+  padding: 0 1em;
+  margin: 0 1em;
+  border-right: 1px solid white;
+  color: white;
+  /* font-size: 1.8em; */
+}

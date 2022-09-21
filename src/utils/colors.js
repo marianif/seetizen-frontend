@@ -1,0 +1,28 @@
+// brand palette
+
+export const colors = {
+  black: "#161616",
+  darkGray: "#121212",
+  white: "#ffffff",
+  action: "#0a84ff",
+  success: "#30d163",
+  red500: "#ef4444",
+  red600: "#dc2626",
+  light200: "#e7e5e4",
+  gray100: "#f7f7f7",
+  gray200: "#eaeaea",
+  gray300: "#cccccc",
+  gray400: "#9b9da1",
+  gray500: "#7f7f7f",
+  gray600: "#4a4a4a",
+  pink400: "#f472b6",
+  pink700: "#be185d",
+  violet500: "#8b5cf6",
+  indigo700: "#4338ca",
+  yellow400: "#facc15",
+  orange500: "#f97316",
+  lime500: "#84cc16",
+  emerald300: "#6ee7b7",
+  emerald400: "#34d399",
+  emerald600: "#059669",
+};

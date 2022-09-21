@@ -1,0 +1,16 @@
+{
+  "resourceName": "seetizenStorage",
+  "policyUUID": "31a1b6ed",
+  "bucketName": "seetizen-storage-bucket",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

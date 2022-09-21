@@ -1,0 +1,14 @@
+.container {
+  /* background-color: aqua; */
+  width: 100%;
+  padding-bottom: 5%;
+}
+.editorContainer {
+  color: #090909;
+  font-size: 1.4em;
+  font-family: "Times New Roman", Times, serif;
+  padding: 0 1em;
+  border-left: 1px rgb(190, 190, 190) solid;
+  border-right: 1px rgb(190, 190, 190) solid;
+  margin-top: 1.5em;
+}
