@@ -2,7 +2,7 @@ import Layout from "./Layout";
 import MarkdownBar from "./CreateArticle/MarkdownBar";
 import TextEditor from "./CreateArticle/TextEditor";
 import ToolbarButton from "./CreateArticle/ToolbarButton";
-import ToolBar from "./CreateArticle/Toolbar";
+import ToolBar from "./CreateArticle/ToolBar";
 import Spinner from "./Spinner";
 import EventForm from "./CreateEvent/EventForm";
 import AppHeader from "./AppHeader/AppHeader";

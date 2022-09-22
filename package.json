@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/createAwsExports.js && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "buildTest": "node scripts/createAwsExports.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/cache": "latest",
