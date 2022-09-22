@@ -3,7 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
+      "@/components/*": ["src/components/*"],
       "@/data/*": ["src/data/*"],
       "@/styles/*": ["src/styles/*"],
       "@/src/*": ["src/*"],
