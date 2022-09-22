@@ -7,7 +7,7 @@ import { Spinner } from "../components/";
 import { LoadingButton } from "@mui/lab";
 import { colors } from "../utils/colors";
 
-const LoginPage = () => {
+const LoginPage = (props) => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [showError, setShowError] = useState(false);

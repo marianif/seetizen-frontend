@@ -3,7 +3,7 @@
   "serviceConfiguration": {
     "apiName": "seetizen",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "C:\\Users\\maria\\Desktop\\social-around\\amplify\\backend\\api\\seetizen\\schema.graphql",
+    "gqlSchemaPath": "C:\\Users\\maria\\Desktop\\seetizen\\amplify\\backend\\api\\seetizen\\schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
       "expirationTime": 7

@@ -16,21 +16,73 @@ export const createUser = /* GraphQL */ `
       longitude
       avatarKey
       partecipations {
+        items {
+          id
+          partecipantName
+          partecipantAvatarKey
+          count
+          createdAt
+          updatedAt
+          userPartecipationsId
+          eventPartecipationsId
+        }
         nextToken
       }
       createdEvent {
+        items {
+          id
+          organizerId
+          type
+          partecipationsCount
+          title
+          description
+          label
+          url
+          startsAt
+          address
+          location
+          latitude
+          longitude
+          coverKey
+          tagIDS
+          tags
+          createdAt
+          updatedAt
+          userCreatedEventId
+          groupEventsId
+        }
         nextToken
       }
       joined_groups
       administrated_groups
       articles {
+        items {
+          id
+          writerId
+          type
+          title
+          content
+          coverKey
+          tagIDS
+          publishedAt
+          latitude
+          longitude
+          viewsCount
+          viewersIDS
+          createdAt
+          updatedAt
+          userArticlesId
+          groupArticlesId
+        }
         nextToken
       }
       isVerified
+      verificationCount
       notificationToken
       phoneNumber
       phonePrefix
       searcheable
+      tagIDS
       viewport
       createdAt
       updatedAt
@@ -52,17 +104,68 @@ export const updateUser = /* GraphQL */ `
       longitude
       avatarKey
       partecipations {
+        items {
+          id
+          partecipantName
+          partecipantAvatarKey
+          count
+          createdAt
+          updatedAt
+          userPartecipationsId
+          eventPartecipationsId
+        }
         nextToken
       }
       createdEvent {
+        items {
+          id
+          organizerId
+          type
+          partecipationsCount
+          title
+          description
+          label
+          url
+          startsAt
+          address
+          location
+          latitude
+          longitude
+          coverKey
+          tagIDS
+          tags
+          createdAt
+          updatedAt
+          userCreatedEventId
+          groupEventsId
+        }
         nextToken
       }
       joined_groups
       administrated_groups
       articles {
+        items {
+          id
+          writerId
+          type
+          title
+          content
+          coverKey
+          tagIDS
+          publishedAt
+          latitude
+          longitude
+          viewsCount
+          viewersIDS
+          createdAt
+          updatedAt
+          userArticlesId
+          groupArticlesId
+        }
         nextToken
       }
       isVerified
+      verificationCount
       notificationToken
       phoneNumber
       phonePrefix
@@ -105,51 +208,8 @@ export const deleteUser = /* GraphQL */ `
         items {
           id
           organizerId
-          user {
-            id
-            name
-            bio
-            label
-            credits
-            latitude
-            longitude
-            avatarKey
-            joined_groups
-            administrated_groups
-            isVerified
-            notificationToken
-            phoneNumber
-            phonePrefix
-            searcheable
-            tags
-            viewport
-            createdAt
-            updatedAt
-          }
-          group {
-            id
-            name
-            label
-            bio
-            credits
-            adminsIDS
-            editorsIDS
-            membersIDS
-            bannedIDS
-            avatarKey
-            category
-            latitude
-            longitude
-            tags
-            tagIDS
-            createdAt
-            updatedAt
-          }
           type
           partecipationsCount
-          partecipations {
-            nextToken
-          }
           title
           description
           label
@@ -162,12 +222,6 @@ export const deleteUser = /* GraphQL */ `
           coverKey
           tagIDS
           tags
-          likes {
-            nextToken
-          }
-          comments {
-            nextToken
-          }
           createdAt
           updatedAt
           userCreatedEventId
@@ -182,61 +236,15 @@ export const deleteUser = /* GraphQL */ `
           id
           writerId
           type
-          user {
-            id
-            name
-            bio
-            label
-            credits
-            latitude
-            longitude
-            avatarKey
-            joined_groups
-            administrated_groups
-            isVerified
-            notificationToken
-            phoneNumber
-            phonePrefix
-            searcheable
-            tags
-            viewport
-            createdAt
-            updatedAt
-          }
-          group {
-            id
-            name
-            label
-            bio
-            credits
-            adminsIDS
-            editorsIDS
-            membersIDS
-            bannedIDS
-            avatarKey
-            category
-            latitude
-            longitude
-            tags
-            tagIDS
-            createdAt
-            updatedAt
-          }
           title
           content
           coverKey
-          tags
+          tagIDS
           publishedAt
           latitude
           longitude
           viewsCount
           viewersIDS
-          likes {
-            nextToken
-          }
-          comments {
-            nextToken
-          }
           createdAt
           updatedAt
           userArticlesId
@@ -245,11 +253,12 @@ export const deleteUser = /* GraphQL */ `
         nextToken
       }
       isVerified
+      verificationCount
       notificationToken
       phoneNumber
       phonePrefix
       searcheable
-      tags
+      tagIDS
       viewport
       createdAt
       updatedAt
@@ -273,15 +282,55 @@ export const createGroup = /* GraphQL */ `
       bannedIDS
       avatarKey
       category
-      tagIDS
       events {
+        items {
+          id
+          organizerId
+          type
+          partecipationsCount
+          title
+          description
+          label
+          url
+          startsAt
+          address
+          location
+          latitude
+          longitude
+          coverKey
+          tagIDS
+          tags
+          createdAt
+          updatedAt
+          userCreatedEventId
+          groupEventsId
+        }
         nextToken
       }
       articles {
+        items {
+          id
+          writerId
+          type
+          title
+          content
+          coverKey
+          tagIDS
+          publishedAt
+          latitude
+          longitude
+          viewsCount
+          viewersIDS
+          createdAt
+          updatedAt
+          userArticlesId
+          groupArticlesId
+        }
         nextToken
       }
       latitude
       longitude
+      tagIDS
       createdAt
       updatedAt
     }
@@ -305,9 +354,49 @@ export const updateGroup = /* GraphQL */ `
       avatarKey
       category
       events {
+        items {
+          id
+          organizerId
+          type
+          partecipationsCount
+          title
+          description
+          label
+          url
+          startsAt
+          address
+          location
+          latitude
+          longitude
+          coverKey
+          tagIDS
+          tags
+          createdAt
+          updatedAt
+          userCreatedEventId
+          groupEventsId
+        }
         nextToken
       }
       articles {
+        items {
+          id
+          writerId
+          type
+          title
+          content
+          coverKey
+          tagIDS
+          publishedAt
+          latitude
+          longitude
+          viewsCount
+          viewersIDS
+          createdAt
+          updatedAt
+          userArticlesId
+          groupArticlesId
+        }
         nextToken
       }
       latitude
@@ -339,51 +428,8 @@ export const deleteGroup = /* GraphQL */ `
         items {
           id
           organizerId
-          user {
-            id
-            name
-            bio
-            label
-            credits
-            latitude
-            longitude
-            avatarKey
-            joined_groups
-            administrated_groups
-            isVerified
-            notificationToken
-            phoneNumber
-            phonePrefix
-            searcheable
-            tags
-            viewport
-            createdAt
-            updatedAt
-          }
-          group {
-            id
-            name
-            label
-            bio
-            credits
-            adminsIDS
-            editorsIDS
-            membersIDS
-            bannedIDS
-            avatarKey
-            category
-            latitude
-            longitude
-            tags
-            tagIDS
-            createdAt
-            updatedAt
-          }
           type
           partecipationsCount
-          partecipations {
-            nextToken
-          }
           title
           description
           label
@@ -396,12 +442,6 @@ export const deleteGroup = /* GraphQL */ `
           coverKey
           tagIDS
           tags
-          likes {
-            nextToken
-          }
-          comments {
-            nextToken
-          }
           createdAt
           updatedAt
           userCreatedEventId
@@ -414,61 +454,15 @@ export const deleteGroup = /* GraphQL */ `
           id
           writerId
           type
-          user {
-            id
-            name
-            bio
-            label
-            credits
-            latitude
-            longitude
-            avatarKey
-            joined_groups
-            administrated_groups
-            isVerified
-            notificationToken
-            phoneNumber
-            phonePrefix
-            searcheable
-            tags
-            viewport
-            createdAt
-            updatedAt
-          }
-          group {
-            id
-            name
-            label
-            bio
-            credits
-            adminsIDS
-            editorsIDS
-            membersIDS
-            bannedIDS
-            avatarKey
-            category
-            latitude
-            longitude
-            tags
-            tagIDS
-            createdAt
-            updatedAt
-          }
           title
           content
           coverKey
-          tags
+          tagIDS
           publishedAt
           latitude
           longitude
           viewsCount
           viewersIDS
-          likes {
-            nextToken
-          }
-          comments {
-            nextToken
-          }
           createdAt
           updatedAt
           userArticlesId
@@ -478,7 +472,6 @@ export const deleteGroup = /* GraphQL */ `
       }
       latitude
       longitude
-      tags
       tagIDS
       createdAt
       updatedAt
@@ -495,6 +488,14 @@ export const createArticle = /* GraphQL */ `
       writerId
       type
       user {
+        id
+        name
+        bio
+        label
+        credits
+        latitude
+        longitude
+        avatarKey
         partecipations {
           nextToken
         }
@@ -507,34 +508,74 @@ export const createArticle = /* GraphQL */ `
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
+        tagIDS
         viewport
         createdAt
         updatedAt
       }
       group {
+        id
+        name
+        label
+        bio
+        credits
+        adminsIDS
+        editorsIDS
+        membersIDS
+        bannedIDS
+        avatarKey
+        category
         events {
           nextToken
         }
         articles {
           nextToken
         }
+        latitude
+        longitude
+        tagIDS
+        createdAt
+        updatedAt
       }
       title
       content
       coverKey
+      tagIDS
       publishedAt
       latitude
       longitude
       viewsCount
       viewersIDS
       likes {
+        items {
+          id
+          counts
+          ownerId
+          ownerName
+          createdAt
+          updatedAt
+          articleLikesId
+          eventLikesId
+        }
         nextToken
       }
       comments {
+        items {
+          id
+          ownerId
+          ownerName
+          ownerAvatarKey
+          content
+          createdAt
+          updatedAt
+          articleCommentsId
+          eventCommentsId
+        }
         nextToken
       }
       createdAt
@@ -563,72 +604,23 @@ export const updateArticle = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -646,54 +638,13 @@ export const updateArticle = /* GraphQL */ `
         avatarKey
         category
         events {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         latitude
         longitude
-        tags
         tagIDS
         createdAt
         updatedAt
@@ -701,7 +652,7 @@ export const updateArticle = /* GraphQL */ `
       title
       content
       coverKey
-      tags
+      tagIDS
       publishedAt
       latitude
       longitude
@@ -760,72 +711,23 @@ export const deleteArticle = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -843,54 +745,13 @@ export const deleteArticle = /* GraphQL */ `
         avatarKey
         category
         events {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         latitude
         longitude
-        tags
         tagIDS
         createdAt
         updatedAt
@@ -898,7 +759,7 @@ export const deleteArticle = /* GraphQL */ `
       title
       content
       coverKey
-      tags
+      tagIDS
       publishedAt
       latitude
       longitude
@@ -967,10 +828,12 @@ export const createEvent = /* GraphQL */ `
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -1078,71 +941,23 @@ export const updateEvent = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -1160,54 +975,13 @@ export const updateEvent = /* GraphQL */ `
         avatarKey
         category
         events {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         latitude
         longitude
-        tags
         tagIDS
         createdAt
         updatedAt
@@ -1291,72 +1065,23 @@ export const deleteEvent = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -1374,54 +1099,13 @@ export const deleteEvent = /* GraphQL */ `
         avatarKey
         category
         events {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         latitude
         longitude
-        tags
         tagIDS
         createdAt
         updatedAt
@@ -1508,28 +1192,6 @@ export const createInvitation = /* GraphQL */ `
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
@@ -1538,10 +1200,12 @@ export const createInvitation = /* GraphQL */ `
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -1556,22 +1220,15 @@ export const createInvitation = /* GraphQL */ `
           latitude
           longitude
           avatarKey
-          partecipations {
-            nextToken
-          }
-          createdEvent {
-            nextToken
-          }
           joined_groups
           administrated_groups
-          articles {
-            nextToken
-          }
           isVerified
+          verificationCount
           notificationToken
           phoneNumber
           phonePrefix
           searcheable
+          tagIDS
           viewport
           createdAt
           updatedAt
@@ -1593,22 +1250,15 @@ export const createInvitation = /* GraphQL */ `
           latitude
           longitude
           avatarKey
-          partecipations {
-            nextToken
-          }
-          createdEvent {
-            nextToken
-          }
           joined_groups
           administrated_groups
-          articles {
-            nextToken
-          }
           isVerified
+          verificationCount
           notificationToken
           phoneNumber
           phonePrefix
           searcheable
+          tagIDS
           viewport
           createdAt
           updatedAt
@@ -1625,12 +1275,6 @@ export const createInvitation = /* GraphQL */ `
           bannedIDS
           avatarKey
           category
-          events {
-            nextToken
-          }
-          articles {
-            nextToken
-          }
           latitude
           longitude
           tagIDS
@@ -1640,16 +1284,6 @@ export const createInvitation = /* GraphQL */ `
         type
         partecipationsCount
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         title
@@ -1665,30 +1299,9 @@ export const createInvitation = /* GraphQL */ `
         tagIDS
         tags
         likes {
-          items {
-            id
-            counts
-            ownerId
-            ownerName
-            createdAt
-            updatedAt
-            articleLikesId
-            eventLikesId
-          }
           nextToken
         }
         comments {
-          items {
-            id
-            ownerId
-            ownerName
-            ownerAvatarKey
-            content
-            createdAt
-            updatedAt
-            articleCommentsId
-            eventCommentsId
-          }
           nextToken
         }
         createdAt
@@ -1720,72 +1333,23 @@ export const updateInvitation = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -1800,23 +1364,15 @@ export const updateInvitation = /* GraphQL */ `
           latitude
           longitude
           avatarKey
-          partecipations {
-            nextToken
-          }
-          createdEvent {
-            nextToken
-          }
           joined_groups
           administrated_groups
-          articles {
-            nextToken
-          }
           isVerified
+          verificationCount
           notificationToken
           phoneNumber
           phonePrefix
           searcheable
-          tags
+          tagIDS
           viewport
           createdAt
           updatedAt
@@ -1838,23 +1394,15 @@ export const updateInvitation = /* GraphQL */ `
           latitude
           longitude
           avatarKey
-          partecipations {
-            nextToken
-          }
-          createdEvent {
-            nextToken
-          }
           joined_groups
           administrated_groups
-          articles {
-            nextToken
-          }
           isVerified
+          verificationCount
           notificationToken
           phoneNumber
           phonePrefix
           searcheable
-          tags
+          tagIDS
           viewport
           createdAt
           updatedAt
@@ -1871,15 +1419,8 @@ export const updateInvitation = /* GraphQL */ `
           bannedIDS
           avatarKey
           category
-          events {
-            nextToken
-          }
-          articles {
-            nextToken
-          }
           latitude
           longitude
-          tags
           tagIDS
           createdAt
           updatedAt
@@ -1887,16 +1428,6 @@ export const updateInvitation = /* GraphQL */ `
         type
         partecipationsCount
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         title
@@ -1912,30 +1443,9 @@ export const updateInvitation = /* GraphQL */ `
         tagIDS
         tags
         likes {
-          items {
-            id
-            counts
-            ownerId
-            ownerName
-            createdAt
-            updatedAt
-            articleLikesId
-            eventLikesId
-          }
           nextToken
         }
         comments {
-          items {
-            id
-            ownerId
-            ownerName
-            ownerAvatarKey
-            content
-            createdAt
-            updatedAt
-            articleCommentsId
-            eventCommentsId
-          }
           nextToken
         }
         createdAt
@@ -1967,72 +1477,23 @@ export const deleteInvitation = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -2047,23 +1508,15 @@ export const deleteInvitation = /* GraphQL */ `
           latitude
           longitude
           avatarKey
-          partecipations {
-            nextToken
-          }
-          createdEvent {
-            nextToken
-          }
           joined_groups
           administrated_groups
-          articles {
-            nextToken
-          }
           isVerified
+          verificationCount
           notificationToken
           phoneNumber
           phonePrefix
           searcheable
-          tags
+          tagIDS
           viewport
           createdAt
           updatedAt
@@ -2085,23 +1538,15 @@ export const deleteInvitation = /* GraphQL */ `
           latitude
           longitude
           avatarKey
-          partecipations {
-            nextToken
-          }
-          createdEvent {
-            nextToken
-          }
           joined_groups
           administrated_groups
-          articles {
-            nextToken
-          }
           isVerified
+          verificationCount
           notificationToken
           phoneNumber
           phonePrefix
           searcheable
-          tags
+          tagIDS
           viewport
           createdAt
           updatedAt
@@ -2118,15 +1563,8 @@ export const deleteInvitation = /* GraphQL */ `
           bannedIDS
           avatarKey
           category
-          events {
-            nextToken
-          }
-          articles {
-            nextToken
-          }
           latitude
           longitude
-          tags
           tagIDS
           createdAt
           updatedAt
@@ -2134,16 +1572,6 @@ export const deleteInvitation = /* GraphQL */ `
         type
         partecipationsCount
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         title
@@ -2159,30 +1587,9 @@ export const deleteInvitation = /* GraphQL */ `
         tagIDS
         tags
         likes {
-          items {
-            id
-            counts
-            ownerId
-            ownerName
-            createdAt
-            updatedAt
-            articleLikesId
-            eventLikesId
-          }
           nextToken
         }
         comments {
-          items {
-            id
-            ownerId
-            ownerName
-            ownerAvatarKey
-            content
-            createdAt
-            updatedAt
-            articleCommentsId
-            eventCommentsId
-          }
           nextToken
         }
         createdAt
@@ -2427,72 +1834,23 @@ export const createReferral = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -2521,72 +1879,23 @@ export const updateReferral = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -2615,72 +1924,23 @@ export const deleteReferral = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -2709,72 +1969,23 @@ export const createFollowRelationship = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -2789,72 +2000,23 @@ export const createFollowRelationship = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -2882,72 +2044,23 @@ export const updateFollowRelationship = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -2962,72 +2075,23 @@ export const updateFollowRelationship = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -3055,72 +2119,23 @@ export const deleteFollowRelationship = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt
@@ -3135,72 +2150,23 @@ export const deleteFollowRelationship = /* GraphQL */ `
         longitude
         avatarKey
         partecipations {
-          items {
-            id
-            partecipantName
-            partecipantAvatarKey
-            count
-            createdAt
-            updatedAt
-            userPartecipationsId
-            eventPartecipationsId
-          }
           nextToken
         }
         createdEvent {
-          items {
-            id
-            organizerId
-            type
-            partecipationsCount
-            title
-            description
-            label
-            url
-            startsAt
-            address
-            location
-            latitude
-            longitude
-            coverKey
-            tagIDS
-            tags
-            createdAt
-            updatedAt
-            userCreatedEventId
-            groupEventsId
-          }
           nextToken
         }
         joined_groups
         administrated_groups
         articles {
-          items {
-            id
-            writerId
-            type
-            title
-            content
-            coverKey
-            tags
-            publishedAt
-            latitude
-            longitude
-            viewsCount
-            viewersIDS
-            createdAt
-            updatedAt
-            userArticlesId
-            groupArticlesId
-          }
           nextToken
         }
         isVerified
+        verificationCount
         notificationToken
         phoneNumber
         phonePrefix
         searcheable
-        tags
+        tagIDS
         viewport
         createdAt
         updatedAt

@@ -3,7 +3,7 @@ import styles from "@/styles/pages/Dashboard.module.css";
 import { DashboardAction, DashboardHelper } from "@/src/components/Dashboard";
 import actions from "@/data/dashboardActions";
 import helpers from "@/data/dashboardHelpers";
-import { withSSRContext, graphqlOperation } from "aws-amplify";
+import { withSSRContext, graphqlOperation, API } from "aws-amplify";
 import { getUser, listGroups } from "@/src/graphql/queries";
 import { useState, useEffect } from "react";
 import { fetchMultipleAvatars, fetchAvatar } from "helpers/storage";

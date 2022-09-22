@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/createAwsExports.js && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "buildTest": "node scripts/createAwsExports.js"
   },
   "dependencies": {
     "@emotion/cache": "latest",
@@ -34,6 +35,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "dotenv": "^16.0.2",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6"
   }

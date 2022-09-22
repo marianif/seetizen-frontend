@@ -13,7 +13,7 @@ import { LoadingButton } from "@mui/lab";
 import styles from "@/styles/pages/CreateArticle.module.css";
 import { colors } from "@/src/utils/colors";
 
-const CreateArticle = () => {
+const CreateArticle = (props) => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const { hasPermission, isUsingAs, currentGroup } = useSelector(

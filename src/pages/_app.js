@@ -10,9 +10,9 @@ import theme from "@/styles/theme";
 import PropTypes from "prop-types";
 import createEmotionCache from "@/src/createEmotionCache";
 
-// Amplify backend
 Amplify.configure({
   ...config,
+  // aws_appsync_apiKey: props.AWS_API_KEY,
   ssr: true,
 });
 
