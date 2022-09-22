@@ -27,6 +27,7 @@ import { createEvent } from "@/src/graphql/mutations";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { colors } from "@/src/utils/colors";
+import { BASE_URL } from "constants";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -92,7 +93,7 @@ const CreateEventPage = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/api/places/search?place=${search}&sessionToken=${sessionToken}`
+        `${BASE_URL}api/places/search?place=${search}&sessionToken=${sessionToken}`
       );
       const { predictions } = await res.json();
       setPredictions(predictions);

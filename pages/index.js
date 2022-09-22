@@ -6,8 +6,10 @@ import { Auth } from "aws-amplify";
 import { Spinner } from "../src/components";
 import { LoadingButton } from "@mui/lab";
 import { colors } from "@/utils/colors";
+import { BASE_URL } from "constants";
 
 const LoginPage = (props) => {
+  console.log(BASE_URL);
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [showError, setShowError] = useState(false);
