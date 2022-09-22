@@ -43,6 +43,7 @@ const MenuProps = {
 };
 
 const CreateEventPage = () => {
+  console.log({ BASE_URL });
   const router = useRouter();
   const sessionToken = useMemo(() => uuidv4(), []);
   const { hasPermission, isUsingAs, currentGroup } = useSelector(
@@ -105,10 +106,9 @@ const CreateEventPage = () => {
 
   const onLocationSelect = async ({ address, placeId }) => {
     setShowResults(false);
-    console.log({ address, placeId });
     try {
       const res = await fetch(
-        `http://localhost:3000/api/places/select?placeId=${placeId}&sessionToken=${sessionToken}`
+        `${BASE_URL}api/places/select?placeId=${placeId}&sessionToken=${sessionToken}`
       );
       const { result } = await res.json(res);
       const { location: coords } = result.geometry;
