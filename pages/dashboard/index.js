@@ -150,7 +150,7 @@ export async function getServerSideProps({ req, res }) {
       variables: {
         id: attributes.sub,
       },
-      authMode: "API_KEY",
+      // authMode: "API_KEY",
     });
 
     const { data } = await API.graphql(

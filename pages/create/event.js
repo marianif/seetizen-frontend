@@ -43,7 +43,6 @@ const MenuProps = {
 };
 
 const CreateEventPage = () => {
-  console.log({ BASE_URL });
   const router = useRouter();
   const sessionToken = useMemo(() => uuidv4(), []);
   const { hasPermission, isUsingAs, currentGroup } = useSelector(

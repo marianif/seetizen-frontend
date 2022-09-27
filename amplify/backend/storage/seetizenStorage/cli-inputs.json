@@ -1,7 +1,7 @@
 {
   "resourceName": "seetizenStorage",
-  "policyUUID": "31a1b6ed",
-  "bucketName": "seetizen-storage-bucket",
+  "policyUUID": "ed0da85e",
+  "bucketName": "seetizen142f36cda8a7417cae3efe1229e5f1f8",
   "storageAccess": "authAndGuest",
   "guestAccess": [
     "READ"

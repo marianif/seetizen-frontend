@@ -1,9 +1,7 @@
 # This "input" configures a global authorization rule to enable public access to
 # all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
-input AMPLIFY {
-  globalAuthRule: AuthRule = { allow: public }
-} # FOR TESTING ONLY!
-type User @model(subscriptions: null) {
+
+type User @model(subscriptions: null) @auth(rules: [{ allow: private }]) {
   id: ID!
   # username: String! @index(name: "byUsername", queryField: "list")
   name: String!
@@ -31,7 +29,7 @@ type User @model(subscriptions: null) {
   viewport: String
 }
 
-type Group @model(subscriptions: null) {
+type Group @model(subscriptions: null) @auth(rules: [{ allow: private }]) {
   id: ID!
   name: String!
   label: String!
@@ -51,7 +49,7 @@ type Group @model(subscriptions: null) {
   tagIDS: String @default(value: "[]") #ci serve per eseguire la query
 }
 
-type Article @model(subscriptions: null) {
+type Article @model(subscriptions: null) @auth(rules: [{ allow: private }]) {
   id: ID!
   writerId: ID!  # Può essere l'id dello user o del gruppo
     @index(
@@ -81,7 +79,7 @@ type Article @model(subscriptions: null) {
   comments: [Comment] @hasMany
 }
 
-type Event @model(subscriptions: null) {
+type Event @model(subscriptions: null) @auth(rules: [{ allow: private }]) {
   id: ID!
   organizerId: ID!
     @index(
@@ -116,14 +114,20 @@ type Event @model(subscriptions: null) {
   comments: [Comment] @hasMany
 }
 
-type Invitation @model(subscriptions: null) {
+type Invitation @model(subscriptions: null) @auth(rules: [{ allow: private }]) {
   id: ID!
   proposerId: ID!
     @index(
       name: "byProposer"
       queryField: "listInvitationsByProposer"
-      sortKeyFields: ["startsAt", "eventId"]
+      sortKeyFields: ["startsAt"]
     )
+  # proposerId: ID!
+  #   @index(
+  #     name: "byProposer"
+  #     queryField: "listInvitationsByProposer"
+  #     sortKeyFields: ["startsAt", "eventId"]
+  #   )
   proposer: User @hasOne(fields: ["proposerId"])
   receivers: [User] @hasMany(fields: "receiverId")
   receiverId: ID!
@@ -132,13 +136,16 @@ type Invitation @model(subscriptions: null) {
       queryField: "listInvitationsByReceiver"
       sortKeyFields: ["startsAt"]
     )
-  eventId: ID!
+  # eventId: ID!
   message: String
-  event: Event @hasOne(fields: "eventId")
+  event: Event @hasOne
+  # event: Event @hasOne(fields: "eventId")
   startsAt: AWSDateTime!
 }
 
-type Notification @model(subscriptions: null) {
+type Notification
+  @model(subscriptions: null)
+  @auth(rules: [{ allow: private }]) {
   id: ID!
   receiverId: ID!
     @index(
@@ -155,21 +162,23 @@ type Notification @model(subscriptions: null) {
   createdAt: AWSDateTime!
 }
 
-type Partecipation @model(subscriptions: null) {
+type Partecipation
+  @model(subscriptions: null)
+  @auth(rules: [{ allow: private }]) {
   id: ID!
   partecipantName: String!
   partecipantAvatarKey: String
   count: Int!
 }
 
-type Like @model {
+type Like @model @auth(rules: [{ allow: private }]) {
   id: ID!
   counts: Int!
   ownerId: String!
   ownerName: String!
 }
 
-type Comment @model {
+type Comment @model @auth(rules: [{ allow: private }]) {
   id: ID!
   ownerId: ID!
   ownerName: String!
@@ -177,21 +186,23 @@ type Comment @model {
   content: String!
 }
 
-type Referral @model(subscriptions: null) {
+type Referral @model(subscriptions: null) @auth(rules: [{ allow: private }]) {
   code: ID! @primaryKey
   ownerId: ID! @index(name: "referralByUser", queryField: "getReferralByUser")
   owner: User @hasOne(fields: ["ownerId"])
   count: Int #Number of times code gets used
 }
 
-type FollowRelationship @model(subscriptions: null) {
+type FollowRelationship
+  @model(subscriptions: null)
+  @auth(rules: [{ allow: private }]) {
   followedId: ID! @primaryKey(sortKeyFields: ["followerId"])
   followerId: ID! @index(name: "byFollower", queryField: "listFollowByFollower")
   follower: User @hasOne(fields: ["followerId"])
   followed: User @hasOne(fields: ["followedId"])
 }
 
-type Consent @model(subscriptions: null) {
+type Consent @model(subscriptions: null) @auth(rules: [{ allow: private }]) {
   id: ID!
   userId: ID!
   username: String!
@@ -203,7 +214,7 @@ type Consent @model(subscriptions: null) {
   termsAndConditionsURL: String
 }
 # Segnalazione degli utenti
-type Report @model(subscriptions: null) {
+type Report @model(subscriptions: null) @auth(rules: [{ allow: private }]) {
   id: ID!
   userId: ID!
   username: String!
@@ -213,7 +224,8 @@ type Report @model(subscriptions: null) {
   description: String
 }
 
-type VerifiedPhoneNumbers @model {
+type VerifiedPhoneNumbers @model @auth(rules: [{ allow: private }]) {
   phoneNumber: String! @primaryKey
   userId: ID!
 }
+   

@@ -3,17 +3,11 @@
 
 const awsmobile = {
   aws_project_region: "eu-central-1",
-  aws_appsync_graphqlEndpoint:
-    "https://evqb74ixorgr7fszphgkp23h6y.appsync-api.eu-central-1.amazonaws.com/graphql",
-  aws_appsync_region: "eu-central-1",
-  aws_appsync_authenticationType: "API_KEY",
-  "aws_appsync_apiKey": "da2-7od4eb7ylrhtlm33ppcfmgzvea",
-  aws_appsync_dangerously_connect_to_http_endpoint_for_testing: true,
   aws_cognito_identity_pool_id:
-    "eu-central-1:bd901e11-8ab3-46f0-9025-871581df66e8",
+    "eu-central-1:6246f2a7-4601-4374-a410-f034ee90c88c",
   aws_cognito_region: "eu-central-1",
-  aws_user_pools_id: "eu-central-1_A3bO9YENs",
-  aws_user_pools_web_client_id: "4nonodqh2bdkdr8qqkuadrfmbu",
+  aws_user_pools_id: "eu-central-1_wRfU1oFYf",
+  aws_user_pools_web_client_id: "7finpjqecq58ad6jip1p6ma65d",
   oauth: {},
   aws_cognito_username_attributes: ["EMAIL"],
   aws_cognito_social_providers: [],
@@ -25,7 +19,13 @@ const awsmobile = {
     passwordPolicyCharacters: [],
   },
   aws_cognito_verification_mechanisms: ["EMAIL"],
-  aws_user_files_s3_bucket: "seetizen-storage-bucket94749-dev",
+  aws_appsync_graphqlEndpoint:
+    "https://mlwveuhnkjhrrb5mfbwj2h4r4u.appsync-api.eu-central-1.amazonaws.com/graphql",
+  aws_appsync_region: "eu-central-1",
+  aws_appsync_authenticationType: "AMAZON_COGNITO_USER_POOLS",
+  aws_appsync_apiKey: "da2-xfx7izkjlbh3tcpb5y6akq2h4a",
+  aws_user_files_s3_bucket:
+    "seetizen142f36cda8a7417cae3efe1229e5f1f8183740-dev",
   aws_user_files_s3_bucket_region: "eu-central-1",
 };
 

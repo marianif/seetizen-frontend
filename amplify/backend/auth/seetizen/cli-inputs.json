@@ -3,7 +3,7 @@
   "cognitoConfig": {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "seetiz1eb86324",
+    "resourceNameTruncated": "seetiz1b9c6e97",
     "userPoolName": "seetizen",
     "autoVerifiedAttributes": [
       "email"
@@ -28,9 +28,9 @@
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "seetiz1eb86324_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "seetiz1b9c6e97_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "1eb86324",
+    "sharedId": "1b9c6e97",
     "resourceName": "seetizen",
     "authSelections": "identityPoolAndUserPool",
     "serviceName": "Cognito",
