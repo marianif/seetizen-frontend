@@ -1,0 +1,17 @@
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: row;
+    position: absolute;
+    bottom: 10px;
+    width: 100vw;
+    background-color: "cyan";
+    height: 100px;
+    z-index: 100;
+  }
+  .card {
+    width: 100%;
+    height: 90px;
+    background-color: cyan;
+  }
+}
