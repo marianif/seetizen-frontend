@@ -1,5 +1,24 @@
 .page {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   width: 100vw;
   height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.textContainer {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading,
+.subheading {
+  color: white;
+  text-align: center;
 }

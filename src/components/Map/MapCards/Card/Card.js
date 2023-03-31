@@ -26,7 +26,12 @@ const Card = ({ place, onItemClick }) => {
           marginRight: 10,
         }}
       >
-        <Image src={image} layout="responsive" width={"100%"} height={"100%"} />
+        <Image
+          src={place.image_url}
+          layout="responsive"
+          width={"100%"}
+          height={"100%"}
+        />
       </div>
       <h1>{place.house_name}</h1>
     </div>
