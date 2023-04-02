@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PROGRAM } from "@/constants/index";
+import { PROGRAM } from "@/constants/places";
 import CloseButton from "../CloseButton/CloseButton";
 import styles from "../../../styles/components/HouseList.module.css";
 import { MdOutlineAccessTime } from "react-icons/md";
@@ -17,7 +17,6 @@ const HouseList = ({ onHousePress, onClose, flows }) => {
       style={{
         width: "100%",
         height: "100%",
-        position: "absolute",
       }}
       className={styles.screen}
     >

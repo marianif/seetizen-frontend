@@ -1,5 +1,6 @@
 .screen {
-  padding: 1em;
+  padding: 2em;
+  width: 100vw;
 }
 .container {
   border-bottom-style: solid;
