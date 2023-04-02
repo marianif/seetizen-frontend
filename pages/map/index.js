@@ -91,59 +91,158 @@ const Map = ({ markers }) => {
   }, []);
 
   return (
-    <div style={{ flex: 1, height: "100%" }}>
-      <div className={styles.page}>
-        <MapBar
-          onProgramPress={() => setShow(SHOW.HOUSE_PROGRAM)}
-          onMapPress={() => setShow(SHOW.MAP)}
-        />
-        {show === SHOW.MAP && (
-          <div
-            style={{
-              width: "100%",
-              //height: "100%",
-              flex: 1,
-              alignItems: "center",
-            }}
-          >
-            <MapView places={PLACES} onItemClick={onItemClick} />
-
-            {/* {HOME_BUTTONS.map((item, index) => (
-              <HomeButton
-                key={index}
-                item={item}
-                onClick={() => {
-                  index === 0
-                    ? setShow(SHOW.HOUSE_PROGRAM)
-                    : index === 1 && setShow(SHOW.ARTIST_LIST);
-                }}
-              />
-            ))} */}
-          </div>
-        )}
-        {show === SHOW.DETAILS && (
-          <Details place={item} onCloseClick={() => setShowDetails(false)} />
-        )}
-        {show === SHOW.HOUSE_PROGRAM && (
-          <HouseList
-            onClose={() => setShow(SHOW.MAP)}
-            onHousePress={onHousePress}
-            onExhbitionPress={() => {}}
-            flows={flows}
-          />
-        )}
-        {show === SHOW.ARTIST_LIST && (
-          <ArtistList onClose={() => setShow(SHOW.MAP)} />
-        )}
-        {show === SHOW.ARTIST_DETAIL && (
-          <ArtistDetail item={{}} onClose={() => setShow(SHOW.MAP)} />
-        )}
-        {show === SHOW.HOUSE_DETAIL && (
-          <HouseDetail item={{}} onClose={() => setShow(SHOW.MAP)} />
-        )}
+    <div className={styles.page}>
+      <div
+        style={{
+          width: 200,
+          height: 200,
+          borderRadius: 100,
+          overflow: "hidden",
+          marginRight: 10,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Image src={image} layout="responsive" width={"100%"} height={"100%"} />
       </div>
+      <div className={styles.textContainer}>
+        <h1 className={styles.heading}>15 - 16 Aprile</h1>
+        <h2 className={styles.subheading}>
+          Festival delle Case per l&apos; Arte
+        </h2>
+        <h2 className={styles.subheading}>
+          Qui troverai la mappa con il programma, le indicazioni delle case e
+          tanto altro!
+        </h2>
+      </div>
+      {/* {!showDetails && (
+      <div className={styles.page}>
+        <MapView places={PLACES} onItemClick={onItemClick} />
+        <MapCards places={PLACES} onItemClick={onItemClick} />
+      </div>
+    )}
+    {showDetails && (
+      <Details place={item} onCloseClick={() => setShowDetails(false)} />
+    )} */}
     </div>
+
+    // <div style={{ flex: 1, height: "100%" }}>
+    //   <div className={styles.page}>
+    //     <MapBar
+    //       onProgramPress={() => setShow(SHOW.HOUSE_PROGRAM)}
+    //       onMapPress={() => setShow(SHOW.MAP)}
+    //     />
+    //     {show === SHOW.MAP && (
+    //       <div
+    //         style={{
+    //           width: "100%",
+    //           //height: "100%",
+    //           flex: 1,
+    //           alignItems: "center",
+    //         }}
+    //       >
+    //         <MapView places={PLACES} onItemClick={onItemClick} />
+
+    //         {/* {HOME_BUTTONS.map((item, index) => (
+    //           <HomeButton
+    //             key={index}
+    //             item={item}
+    //             onClick={() => {
+    //               index === 0
+    //                 ? setShow(SHOW.HOUSE_PROGRAM)
+    //                 : index === 1 && setShow(SHOW.ARTIST_LIST);
+    //             }}
+    //           />
+    //         ))} */}
+    //       </div>
+    //     )}
+    //     {show === SHOW.DETAILS && (
+    //       <Details place={item} onCloseClick={() => setShowDetails(false)} />
+    //     )}
+    //     {show === SHOW.HOUSE_PROGRAM && (
+    //       <HouseList
+    //         onClose={() => setShow(SHOW.MAP)}
+    //         onHousePress={onHousePress}
+    //         onExhbitionPress={() => {}}
+    //         flows={flows}
+    //       />
+    //     )}
+    //     {show === SHOW.ARTIST_LIST && (
+    //       <ArtistList onClose={() => setShow(SHOW.MAP)} />
+    //     )}
+    //     {show === SHOW.ARTIST_DETAIL && (
+    //       <ArtistDetail item={{}} onClose={() => setShow(SHOW.MAP)} />
+    //     )}
+    //     {show === SHOW.HOUSE_DETAIL && (
+    //       <HouseDetail item={{}} onClose={() => setShow(SHOW.MAP)} />
+    //     )}
+    //   </div>
+    // </div>
   );
 };
 
 export default Map;
+
+{
+  /* {!showDetails && (
+    <div className={styles.page}>
+      <MapView places={PLACES} onItemClick={onItemClick} />
+      <MapCards places={PLACES} onItemClick={onItemClick} />
+    </div>
+  )}
+  {showDetails && (
+    <Details place={item} onCloseClick={() => setShowDetails(false)} />
+  )} */
+}
+// <div style={{ flex: 1, height: "100%" }}>
+//   <div className={styles.page}>
+//     <MapBar
+//       onProgramPress={() => setShow(SHOW.HOUSE_PROGRAM)}
+//       onMapPress={() => setShow(SHOW.MAP)}
+//     />
+//     {show === SHOW.MAP && (
+//       <div
+//         style={{
+//           width: "100%",
+//           //height: "100%",
+//           flex: 1,
+//           alignItems: "center",
+//         }}
+//       >
+//         <MapView places={PLACES} onItemClick={onItemClick} />
+
+//         {/* {HOME_BUTTONS.map((item, index) => (
+//           <HomeButton
+//             key={index}
+//             item={item}
+//             onClick={() => {
+//               index === 0
+//                 ? setShow(SHOW.HOUSE_PROGRAM)
+//                 : index === 1 && setShow(SHOW.ARTIST_LIST);
+//             }}
+//           />
+//         ))} */}
+//       </div>
+//     )}
+//     {show === SHOW.DETAILS && (
+//       <Details place={item} onCloseClick={() => setShowDetails(false)} />
+//     )}
+//     {show === SHOW.HOUSE_PROGRAM && (
+//       <HouseList
+//         onClose={() => setShow(SHOW.MAP)}
+//         onHousePress={onHousePress}
+//         onExhbitionPress={() => {}}
+//         flows={flows}
+//       />
+//     )}
+//     {show === SHOW.ARTIST_LIST && (
+//       <ArtistList onClose={() => setShow(SHOW.MAP)} />
+//     )}
+//     {show === SHOW.ARTIST_DETAIL && (
+//       <ArtistDetail item={{}} onClose={() => setShow(SHOW.MAP)} />
+//     )}
+//     {show === SHOW.HOUSE_DETAIL && (
+//       <HouseDetail item={{}} onClose={() => setShow(SHOW.MAP)} />
+//     )}
+//   </div>
+// </div>

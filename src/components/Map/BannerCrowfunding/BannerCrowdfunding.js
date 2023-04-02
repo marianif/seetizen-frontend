@@ -1,29 +1,33 @@
 import React from "react";
-import { RiHandHeartFill } from "react-icons/ri";
+import { RiArrowRightUpLine } from "react-icons/ri";
 
 const BannerCrowdfunding = () => {
   return (
     <div
       style={{
         width: "100%",
-        aspectRatio: 12,
+        height: "10%",
         backgroundColor: "white",
         alignItems: "center",
-        justifyContent: "space-around",
+        justifyContent: "center",
         alignSelf: "center",
         flexDirection: "row",
+        display: "flex",
       }}
     >
-      <RiHandHeartFill size={28} color={"black"} />
+      <RiArrowRightUpLine size={34} color={"black"} />
 
       <h5
         style={{
           color: "black",
-          fontSize: 20,
+          fontSize: 30,
           display: "inline-flex",
+          fontFamily: "Bebas Neue",
+          margin: 0,
+          letterSpacing: 0.5,
         }}
       >
-        Partecipa Al Crowfunging
+        Vai Al Crowdfunding
       </h5>
     </div>
   );
