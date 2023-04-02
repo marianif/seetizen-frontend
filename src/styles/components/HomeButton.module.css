@@ -1,0 +1,12 @@
+.container {
+  border-bottom-style: solid;
+  border-color: rgba(255, 255, 255, 0.225);
+  border-bottom-width: 1px;
+  width: 80%;
+  margin-left: 5%;
+}
+.container h3 {
+  font-family: Bebas Neue;
+  font-size: 3em;
+  letter-spacing: 1px;
+}

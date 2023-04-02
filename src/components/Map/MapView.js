@@ -6,7 +6,7 @@ const API_KEY = "AIzaSyC6rY5Tc1ED5krXQ_pyhcdd9qVZGM0rcNs";
 
 const containerStyle = {
   width: "100%",
-  height: "70%",
+  height: "85%",
 };
 
 const center = {

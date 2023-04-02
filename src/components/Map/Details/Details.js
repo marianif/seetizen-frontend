@@ -1,4 +1,8 @@
 import React from "react";
+import Buttons from "./Buttons/Buttons";
+import { PROGRAM } from "@/constants/index";
+import { PLACES } from "@/constants/places";
+import EventBanner from "../EventBanner/EventBanner";
 
 const Details = ({ place, onCloseClick }) => {
   return (
@@ -23,8 +27,12 @@ const Details = ({ place, onCloseClick }) => {
       >
         <h6 style={{ color: "white", fontSize: 20 }}>Chiudi</h6>
       </div>
+
       <div style={{ width: "100%", height: "90%" }}>
         <h1>{place.house_name}</h1>
+        <div style={{ width: "100%", height: "20%" }}>
+          <Buttons />
+        </div>
         {place.program.events.map((event, index) => (
           <>
             <h2 key={index}>{event.hours}</h2>
