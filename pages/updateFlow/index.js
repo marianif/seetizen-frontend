@@ -2,7 +2,7 @@ import React from "react";
 import { API, graphqlOperation } from "aws-amplify";
 import { updateFlow } from "@/src/graphql/mutations";
 import { listFlows } from "@/src/graphql/queries";
-import { HOUSES } from "./const";
+import { HOUSES } from "@/constants/places";
 import UpdateCard from "@/components/UpdateCard/UpdateCard";
 import { useState, useEffect } from "react";
 

@@ -1,3 +1,11 @@
+import React from "react";
+
+const Login = () => {
+  return <div>Login</div>;
+};
+
+export default Login;
+
 // import { useRouter } from "next/router";
 // import styles from "@/styles/pages/Login.module.css";
 // import { useState, useEffect } from "react";

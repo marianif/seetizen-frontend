@@ -1,3 +1,11 @@
+import React from "react";
+
+const CreateEvent = () => {
+  return <div>CreateEvent</div>;
+};
+
+export default CreateEvent;
+
 // import { API, Auth, graphqlOperation, withSSRContext } from "aws-amplify";
 // import styles from "@/styles/pages/CreateEvent.module.css";
 // import Link from "next/link";
