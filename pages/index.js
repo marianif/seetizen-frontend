@@ -88,6 +88,8 @@ const Map = ({ markers }) => {
     getFlowRate();
   }, []);
 
+  const image = require("../public/images/logo-aprile.png");
+
   return (
     <div className={styles.page}>
       <div
