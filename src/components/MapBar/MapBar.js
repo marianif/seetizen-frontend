@@ -3,16 +3,17 @@ import Box from "@mui/material/Box";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import RestoreIcon from "@mui/icons-material/Restore";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+import RoofingIcon from "@mui/icons-material/Roofing";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import BannerCrowdfunding from "../Map/BannerCrowfunding/BannerCrowdfunding";
+import MapIcon from "@mui/icons-material/Map";
 
-const MapBar = ({ onProgramPress, onArtistPress, onMapPress }) => {
+const MapBar = ({ onProgramPress, onHousePress, onMapPress }) => {
   const [value, setValue] = React.useState(0);
 
   return (
     <Box sx={{ width: "100%", position: "fixed", bottom: 0, zIndex: 100 }}>
-      <BannerCrowdfunding />
+      {/* <BannerCrowdfunding /> */}
       <BottomNavigation
         showLabels
         value={value}
@@ -22,7 +23,7 @@ const MapBar = ({ onProgramPress, onArtistPress, onMapPress }) => {
       >
         <BottomNavigationAction
           label="Mappa"
-          icon={<RestoreIcon />}
+          icon={<MapIcon />}
           onClick={onMapPress}
         />
         <BottomNavigationAction
@@ -31,9 +32,9 @@ const MapBar = ({ onProgramPress, onArtistPress, onMapPress }) => {
           onClick={onProgramPress}
         />
         <BottomNavigationAction
-          label="Artisti"
-          icon={<FavoriteIcon />}
-          onClick={onArtistPress}
+          label="Case"
+          icon={<RoofingIcon />}
+          onClick={onHousePress}
         />
         <BottomNavigationAction label="Bike Tour" icon={<LocationOnIcon />} />
       </BottomNavigation>

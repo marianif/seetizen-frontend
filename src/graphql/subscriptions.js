@@ -34,3 +34,45 @@ export const onDeleteFlow = /* GraphQL */ `
     }
   }
 `;
+export const onCreateReservation = /* GraphQL */ `
+  subscription OnCreateReservation(
+    $filter: ModelSubscriptionReservationFilterInput
+  ) {
+    onCreateReservation(filter: $filter) {
+      id
+      reservationId
+      houseId
+      partecipants
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateReservation = /* GraphQL */ `
+  subscription OnUpdateReservation(
+    $filter: ModelSubscriptionReservationFilterInput
+  ) {
+    onUpdateReservation(filter: $filter) {
+      id
+      reservationId
+      houseId
+      partecipants
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteReservation = /* GraphQL */ `
+  subscription OnDeleteReservation(
+    $filter: ModelSubscriptionReservationFilterInput
+  ) {
+    onDeleteReservation(filter: $filter) {
+      id
+      reservationId
+      houseId
+      partecipants
+      createdAt
+      updatedAt
+    }
+  }
+`;

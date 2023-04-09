@@ -6,8 +6,6 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
-  padding-top: 5%;
-  padding-bottom: 5%;
 }
 .textContainer {
   display: flex;

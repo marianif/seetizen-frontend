@@ -30,3 +30,34 @@ export const listFlows = /* GraphQL */ `
     }
   }
 `;
+export const getReservation = /* GraphQL */ `
+  query GetReservation($id: ID!) {
+    getReservation(id: $id) {
+      id
+      reservationId
+      houseId
+      partecipants
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listReservations = /* GraphQL */ `
+  query ListReservations(
+    $filter: ModelReservationFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listReservations(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        reservationId
+        houseId
+        partecipants
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;

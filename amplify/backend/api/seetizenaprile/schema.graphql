@@ -8,3 +8,9 @@ type Flow @model {
   houseId: String!
   value: Int @default(value: "0")
 }
+type Reservation @model {
+  id: ID!
+  reservationId: Int!
+  houseId: String!
+  partecipants: String! @default(value: "[]")
+}
