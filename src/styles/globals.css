@@ -44,6 +44,12 @@ h6 {
   font-family: Prompt;
 }
 
+h6 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  line-height: 1.2em;
+}
+
 .h1-white {
   font-size: 3.2em;
   font-family: Bebas Neue;

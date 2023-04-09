@@ -75,6 +75,62 @@ const Map = ({ markers }) => {
     <div className={styles.page}>
       <div style={{ flex: 1, height: "100%" }}>
         <div className={styles.page}>
+          {show === SHOW.MAP && (
+            <div
+              style={{
+                width: "70%",
+                backgroundColor: "white",
+                paddingLeft: 10,
+                paddingTop: 5,
+                borderRadius: 20,
+                position: "absolute",
+                bottom: "8%",
+                left: 10,
+                zIndex: 100,
+              }}
+            >
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                }}
+              >
+                {[1, 2, 3].map((flow) => (
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      width: "33%",
+                    }}
+                    key={flow}
+                  >
+                    <span
+                      style={{
+                        width: 18,
+                        aspectRatio: 1,
+                        height: 18,
+                        borderRadius: 100,
+                        marginRight: 5,
+                        backgroundColor:
+                          flow === 1
+                            ? "green"
+                            : flow === 2
+                            ? "yellow"
+                            : flow === 3 && "red",
+                      }}
+                    />
+                    <p className="p-dark" style={{ fontSize: 13 }}>
+                      {flow === 1
+                        ? "Libero"
+                        : flow === 2
+                        ? "Medio"
+                        : flow === 3 && "Affollato"}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
           <MapBar
             onProgramPress={() => setShow(SHOW.HOUSE_PROGRAM)}
             onMapPress={() => setShow(SHOW.MAP)}

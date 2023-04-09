@@ -65,6 +65,7 @@
 .flowContainerMap p {
   font-size: 1em;
   color: rgb(145, 145, 145);
+  box-shadow: 13px 20px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .flowContainer p {
@@ -76,7 +77,7 @@
 
 .flowCircle {
   border-radius: 100px;
-  width: 25px;
+  width: 20px;
   aspect-ratio: 1;
-  height: 25px;
+  height: 20px;
 }

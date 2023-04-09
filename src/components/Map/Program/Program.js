@@ -119,7 +119,7 @@ const Program = ({ onHousePress, onClose, flows }) => {
                   <h4 className="text-light">{item.houseName}</h4>
                 </div>
 
-                <h1 className="text-light">{item.title}</h1>
+                <h6 className={"text-light"}>{item.title}</h6>
                 <div className={styles.bottomContainer}>
                   {/* <div className={styles.flowContainer}>
                       <p>

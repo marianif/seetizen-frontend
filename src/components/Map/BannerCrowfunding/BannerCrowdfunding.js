@@ -12,36 +12,53 @@ const BannerCrowdfunding = () => {
     <div
       style={{
         width: "96%",
-        height: "10%",
+        height: "15%",
         marginRight: "2%",
         marginLeft: "2%",
         marginTop: "2%",
-        backgroundColor: "white",
-        alignItems: "center",
+
+        alignItems: "flex-start",
         justifyContent: "space-between",
         alignSelf: "center",
-        flexDirection: "row",
+        flexDirection: "column",
         display: "flex",
         position: "absolute",
-        paddingBottom: 35,
         paddingLeft: 10,
-        paddingTop: 35,
         borderRadius: 20,
         overflow: "hidden",
       }}
     >
-      <Image
-        src={logo}
-        // layout="intrinsic"
-        width={150}
-        height={"100%"}
-        objectFit="contain"
-        alt="logo"
-      />
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          backgroundColor: "white",
+          alignItems: "center",
+          justifyContent: "space-between",
+          alignSelf: "center",
+          flexDirection: "row",
+          display: "flex",
+          paddingBottom: 35,
+          paddingLeft: 10,
+          paddingTop: 35,
+          borderRadius: 20,
+          overflow: "hidden",
+          marginBottom: 5,
+        }}
+      >
+        <Image
+          src={logo}
+          // layout="intrinsic"
+          width={150}
+          height={"100%"}
+          objectFit="contain"
+          alt="logo"
+        />
 
-      <a href={LINK}>
-        <CustomButton label={"Vai al Crowdfunding!"} variant="filled" />
-      </a>
+        <a href={LINK}>
+          <CustomButton label={"Vai al Crowdfunding!"} variant="filled" />
+        </a>
+      </div>
     </div>
   );
 };

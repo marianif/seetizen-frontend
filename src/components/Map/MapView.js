@@ -80,23 +80,24 @@ const MapView = ({ houses, onItemClick, flows }) => {
             >
               <InfoWindow position={house.coords}>
                 <div style={{ color: "black", width: 100 }}>
-                  <Image
-                    src={logo}
-                    // layout="intrinsic"
-                    width={50}
-                    height={50}
-                    objectFit="contain"
-                  />
-                  <p>{house.houseName}</p>
                   {flow && (
-                    <div className={styles.flowContainerMap}>
-                      <p className="p-light p-sm">
+                    <div
+                      className={styles.flowContainerMap}
+                      style={{
+                        position: "absolute",
+                        right: 0,
+                        top: 2,
+                        right: 2,
+                        zIndex: 100,
+                      }}
+                    >
+                      {/* <p className="p-light p-sm">
                         {flow === 1
                           ? "Spazio Libero"
                           : flow === 2
                           ? "Sia sta affollando"
                           : flow === 3 && "Affollato"}
-                      </p>
+                      </p> */}
                       <span
                         className={styles.flowCircle}
                         style={{
@@ -110,6 +111,14 @@ const MapView = ({ houses, onItemClick, flows }) => {
                       />
                     </div>
                   )}
+                  <Image
+                    src={logo}
+                    // layout="intrinsic"
+                    width={50}
+                    height={50}
+                    objectFit="contain"
+                  />
+                  <p>{house.houseName}</p>
                 </div>
               </InfoWindow>
             </MarkerF>
