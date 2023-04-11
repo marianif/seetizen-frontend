@@ -45,9 +45,6 @@ const DetailDialog = ({ item, show, setShow }) => {
             <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
               {item.houseName}
             </Typography>
-            <Button autoFocus color="inherit" onClick={handleClose}>
-              save
-            </Button>
           </Toolbar>
         </AppBar>
         <Container>

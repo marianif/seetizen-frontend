@@ -89,13 +89,13 @@ const Map = ({ markers }) => {
                 zIndex: 100,
               }}
             >
-              <div
+              {/* <div
                 style={{
                   width: "100%",
                   display: "flex",
                 }}
               >
-                {[1, 2, 3].map((flow) => (
+                {/* {[1, 2, 3].map((flow) => (
                   <div
                     style={{
                       display: "flex",
@@ -127,8 +127,8 @@ const Map = ({ markers }) => {
                         : flow === 3 && "Affollato"}
                     </p>
                   </div>
-                ))}
-              </div>
+                ))} */}
+              {/* </div> */}
             </div>
           )}
           <MapBar
