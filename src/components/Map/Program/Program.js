@@ -9,6 +9,7 @@ import CustomButton from "@/components/CustomButton";
 import DetailDialog from "@/components/DetailDialog";
 import Heading from "@/components/Typography/Heading";
 import { PROGRAM } from "@/constants/places";
+import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import Image from "next/image";
 
 import logo from "../../../../public/images/aprile-logo-full.png";
@@ -180,7 +181,12 @@ const Program = ({ onHousePress, onClose, flows }) => {
               >
                 <div className={styles.inner}>
                   <h4 className="text-light">{item.houseName}</h4>
-                  <p className="text-light">{item.timeRange}</p>
+                  <span style={{ display: "flex", alignItems: "center" }}>
+                    <AccessTimeFilledIcon
+                      style={{ marginRight: 5, color: "white" }}
+                    />
+                    <p className="text-light">{item.timeRange}</p>
+                  </span>
                 </div>
 
                 <h1 className="text-light">{item.title}</h1>

@@ -570,7 +570,7 @@ export const PROGRAM = {
         title: "Piano solo di Ludovico Bellucci",
         description:
           "@ludovico_bellucci ha 18 anni e suona il pianoforte dall'età di 8. Frequenta il Liceo Musicale Cavour di Torino e si è sempre dedicato alla composizione seguendo un personale estro, ma negli ultimi due anni compone colonne sonore. Ha eseguito dal vivo la colonna sonora da lui ideata per i film Paris qui dort (1925, René Clair) e La caduta di Troia (1911, Giovanni Pastrone). Ha composto la colonna sonora originale del cortometraggio Dura Lex Sed Lex, che si è aggiudicato il premio finale al “believe film festival” di Verona 2022. Si è già esibito al Conservatorio di Torino e alla Cineteca di Karlsrühe (Germania). Ludovico Bellucci è presente su tutti i Digital Store e il suo repertorio include altri brani originali che contraddistinguono il suo stile come Renaissance e Senza Tempo. Quando parla della sua musica la definisce trasognante e retrò, legata al periodo della Belle Èpoque ma non scevra di suggestioni romantiche",
-        timeRange: "ore 18.00 e ore 19.30",
+        timeRange: "18.00 e 19.30",
         artistIds: ["", ""],
       },
       {
