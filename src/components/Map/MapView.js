@@ -9,7 +9,7 @@ import logo from "../../../public/images/aprile-logo.png";
 import styles from "../../../src/styles/components/HouseList.module.css";
 import axios from "axios";
 
-const MAPS_API = process.env.MAPS_API;
+const PIERGIORGIO = "AIzaSyC6rY5Tc1ED5krXQ_pyhcdd9qVZGM0rcNs";
 
 const containerStyle = {
   width: "100%",
@@ -23,7 +23,7 @@ const center = {
 
 const MapView = ({ houses, onItemClick, flows }) => {
   return (
-    <LoadScript googleMapsApiKey={MAPS_API}>
+    <LoadScript googleMapsApiKey={PIERGIORGIO}>
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
