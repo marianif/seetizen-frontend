@@ -6751,6 +6751,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-geolocated@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "react-geolocated@npm:4.0.3"
+  peerDependencies:
+    react: ">= 16.8.0 < 19.0.0"
+  checksum: 51cba93ea6f07ecc63107596f14f940e539a7ee017420a49fd8bf8a5c8d26c6f15503b7b743281184e465573993b18e2eddedcaa39eb53c95b88fb70cda54a03
+  languageName: node
+  linkType: hard
+
 "react-horizontal-scrolling-menu@npm:^4.0.0":
   version: 4.0.0
   resolution: "react-horizontal-scrolling-menu@npm:4.0.0"
@@ -7110,6 +7119,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-form-elements: ^4.14.1
+    react-geolocated: ^4.0.3
     react-horizontal-scrolling-menu: ^4.0.0
     react-icons: ^4.4.0
     react-redux: ^8.0.2

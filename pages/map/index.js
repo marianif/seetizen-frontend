@@ -8,6 +8,7 @@ import styles from "@/styles/pages/Map.module.css";
 import Details from "@/components/Map/Details/Details";
 import Program from "@/components/Map/Program/Program";
 import HousesFlows from "@/components/Map/HousesFlows/HousesFlows";
+import BikeTour from "@/components/Map/BikeTour/BikeTour";
 
 import MapBar from "@/components/MapBar/MapBar";
 
@@ -15,8 +16,7 @@ import { API, graphqlOperation } from "aws-amplify";
 import { updateFlow } from "@/src/graphql/mutations";
 import { getFlow, listFlows } from "@/src/graphql/queries";
 import { onUpdateFlow } from "@/src/graphql/subscriptions";
-import { Api } from "@mui/icons-material";
-import { subscribe } from "graphql";
+import { useGeolocated } from "react-geolocated";
 
 const SHOW = {
   HOUSE_PROGRAM: "HOUSE PROGRAM",
@@ -25,6 +25,7 @@ const SHOW = {
   ARTIST_DETAIL: "ARTIST_DETAIL",
   HOUSE_DETAIL: "ARTIST_DETAIL",
   MAP: "MAP",
+  TOUR: "BIKE_TOUR",
 };
 
 const Map = ({ markers }) => {
@@ -54,6 +55,14 @@ const Map = ({ markers }) => {
       console.warn(error);
     }
   };
+
+  // const { coords, isGeolocationAvailable, isGeolocationEnabled } =
+  //   useGeolocated({
+  //     positionOptions: {
+  //       enableHighAccuracy: false,
+  //     },
+  //     userDecisionTimeout: 5000,
+  //   });
 
   useEffect(() => {
     // Subscribe to creation of Todo
@@ -135,6 +144,7 @@ const Map = ({ markers }) => {
             onProgramPress={() => setShow(SHOW.HOUSE_PROGRAM)}
             onMapPress={() => setShow(SHOW.MAP)}
             onHousePress={() => setShow(SHOW.HOUSE_FLOW)}
+            onTourPress={() => setShow(SHOW.TOUR)}
           />
           {show === SHOW.MAP && (
             <div
@@ -166,6 +176,7 @@ const Map = ({ markers }) => {
           {show === SHOW.HOUSE_FLOW && (
             <HousesFlows onClose={() => setShow(SHOW.MAP)} flows={flows} />
           )}
+          {show === SHOW.TOUR && <BikeTour />}
         </div>
       </div>
     </div>

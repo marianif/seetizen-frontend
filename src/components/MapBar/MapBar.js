@@ -8,7 +8,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import BannerCrowdfunding from "../Map/BannerCrowfunding/BannerCrowdfunding";
 import MapIcon from "@mui/icons-material/Map";
 
-const MapBar = ({ onProgramPress, onHousePress, onMapPress }) => {
+const MapBar = ({ onProgramPress, onHousePress, onMapPress, onTourPress }) => {
   const [value, setValue] = React.useState(0);
 
   return (
@@ -36,7 +36,12 @@ const MapBar = ({ onProgramPress, onHousePress, onMapPress }) => {
           icon={<RoofingIcon />}
           onClick={onHousePress}
         />
-        <BottomNavigationAction label="Bike Tour" icon={<LocationOnIcon />} />
+
+        <BottomNavigationAction
+          label="Bike Tour"
+          icon={<LocationOnIcon />}
+          onClick={onTourPress}
+        />
       </BottomNavigation>
     </Box>
   );
