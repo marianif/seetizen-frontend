@@ -56,14 +56,6 @@ const Map = ({ markers }) => {
     }
   };
 
-  // const { coords, isGeolocationAvailable, isGeolocationEnabled } =
-  //   useGeolocated({
-  //     positionOptions: {
-  //       enableHighAccuracy: false,
-  //     },
-  //     userDecisionTimeout: 5000,
-  //   });
-
   useEffect(() => {
     // Subscribe to creation of Todo
     (async () => {
@@ -97,48 +89,7 @@ const Map = ({ markers }) => {
                 left: 10,
                 zIndex: 100,
               }}
-            >
-              {/* <div
-                style={{
-                  width: "100%",
-                  display: "flex",
-                }}
-              >
-                {/* {[1, 2, 3].map((flow) => (
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      width: "33%",
-                    }}
-                    key={flow}
-                  >
-                    <span
-                      style={{
-                        width: 18,
-                        aspectRatio: 1,
-                        height: 18,
-                        borderRadius: 100,
-                        marginRight: 5,
-                        backgroundColor:
-                          flow === 1
-                            ? "green"
-                            : flow === 2
-                            ? "yellow"
-                            : flow === 3 && "red",
-                      }}
-                    />
-                    <p className="p-dark" style={{ fontSize: 13 }}>
-                      {flow === 1
-                        ? "Libero"
-                        : flow === 2
-                        ? "Medio"
-                        : flow === 3 && "Affollato"}
-                    </p>
-                  </div>
-                ))} */}
-              {/* </div> */}
-            </div>
+            ></div>
           )}
           <MapBar
             onProgramPress={() => setShow(SHOW.HOUSE_PROGRAM)}

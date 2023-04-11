@@ -14,3 +14,11 @@ type Reservation @model {
   houseId: String!
   partecipants: String! @default(value: "[]")
 }
+
+type Biketour @model {
+  id: ID!
+  partecipants: Int! @default(value: "0")
+  partecipantPhoneNumbers: String @default(value: "[]")
+  partecipantsNames: String @default(value: "[]")
+  ##
+}

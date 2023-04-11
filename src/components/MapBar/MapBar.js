@@ -13,7 +13,6 @@ const MapBar = ({ onProgramPress, onHousePress, onMapPress, onTourPress }) => {
 
   return (
     <Box sx={{ width: "100%", position: "fixed", bottom: 0, zIndex: 100 }}>
-      {/* <BannerCrowdfunding /> */}
       <BottomNavigation
         showLabels
         value={value}

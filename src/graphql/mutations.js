@@ -88,3 +88,48 @@ export const deleteReservation = /* GraphQL */ `
     }
   }
 `;
+export const createBiketour = /* GraphQL */ `
+  mutation CreateBiketour(
+    $input: CreateBiketourInput!
+    $condition: ModelBiketourConditionInput
+  ) {
+    createBiketour(input: $input, condition: $condition) {
+      id
+      partecipants
+      partecipantPhoneNumbers
+      partecipantsNames
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateBiketour = /* GraphQL */ `
+  mutation UpdateBiketour(
+    $input: UpdateBiketourInput!
+    $condition: ModelBiketourConditionInput
+  ) {
+    updateBiketour(input: $input, condition: $condition) {
+      id
+      partecipants
+      partecipantPhoneNumbers
+      partecipantsNames
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteBiketour = /* GraphQL */ `
+  mutation DeleteBiketour(
+    $input: DeleteBiketourInput!
+    $condition: ModelBiketourConditionInput
+  ) {
+    deleteBiketour(input: $input, condition: $condition) {
+      id
+      partecipants
+      partecipantPhoneNumbers
+      partecipantsNames
+      createdAt
+      updatedAt
+    }
+  }
+`;

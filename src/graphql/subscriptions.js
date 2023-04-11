@@ -76,3 +76,39 @@ export const onDeleteReservation = /* GraphQL */ `
     }
   }
 `;
+export const onCreateBiketour = /* GraphQL */ `
+  subscription OnCreateBiketour($filter: ModelSubscriptionBiketourFilterInput) {
+    onCreateBiketour(filter: $filter) {
+      id
+      partecipants
+      partecipantPhoneNumbers
+      partecipantsNames
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateBiketour = /* GraphQL */ `
+  subscription OnUpdateBiketour($filter: ModelSubscriptionBiketourFilterInput) {
+    onUpdateBiketour(filter: $filter) {
+      id
+      partecipants
+      partecipantPhoneNumbers
+      partecipantsNames
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteBiketour = /* GraphQL */ `
+  subscription OnDeleteBiketour($filter: ModelSubscriptionBiketourFilterInput) {
+    onDeleteBiketour(filter: $filter) {
+      id
+      partecipants
+      partecipantPhoneNumbers
+      partecipantsNames
+      createdAt
+      updatedAt
+    }
+  }
+`;

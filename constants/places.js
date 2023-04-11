@@ -353,7 +353,7 @@ export const PROGRAM = {
         lng: 7.6962544,
       },
       description:
-        "In occasione del Festival Àprile, Apartment Gallery si sposta dall’ex appartamento di Neri in Piazza Carlo  Alberto, a quello di Sonja in Corso San Maurizio. Dopo tre anni di attività in Via Cesare Battisti, i due curatori hanno scelto una nuova location situata nel cuore del quartiere Vanchiglia.  La mansarda che ospiterà Apartment Gallery ha un rooftop con una vista più che suggestiva sui palazzi  torinesi, mentre l’interno del monolocale è il diretto riflesso dell’inquilina Sonja Krstić. Un ambiente accogliente e alternativo che per il Festival avrà altri inquilini, ovvero le opere degli artisti che Apartment  Gallery rappresenta. I creativi avranno libertà di sperimentazione con l’intero appartamento, dalle pareti  ai mobili che lo compongono, fino allo spettacolare rooftop; così, gli spazi abitati e vissuti saranno intesi  come punto di riflessione e ricerca artistica.",
+        "Tra gli appartamenti presenti al Festival Àprile c’è anche Apartment Gallery, nella versione Rooftop Experience. I curatori Neri Muccini e Sonja Krstić festeggiano 3 anni della loro attività di curatela in gallerie d’appartamento proponendo nuovi artisti con installazioni site specific, performance e talk. La cornice sarà uno spazioso e suggestivo rooftop nel cuore del quartiere Vanchiglia.",
     },
     {
       id: "2",
@@ -385,7 +385,8 @@ export const PROGRAM = {
         lat: 45.0790856,
         lng: 7.6676527,
       },
-      description: "",
+      description:
+        "A pochi passi dalla sede del collettivo artistico “Mostro”, nel quartiere San Donato, c’è una casa che è tutta una festa: è la casa di Yaga. Vorreste sapere qualcosina di più su questo luogo misterioso? Avete un solo modo: andarla a scoprire! ",
     },
   ],
   exhibitions: [
@@ -395,7 +396,7 @@ export const PROGRAM = {
       address: "Via Exilles 84",
       title: "Storie di Spettri e Fantasmi",
       description:
-        "di Simona Galeotti e Turi Rapisarda. Le foto raccontano di luoghi in cui coesistono molteplici dimensioni. I “fantasmi” che infestano la realtà sono evocati attraverso figure evanescenti.Siamo dentro un’esperienza carica di visioni, storie da raccontare, avventure fantastiche, spettri e fantasmi. Non ci sono manipolazioni al computer o in camera oscura, le immagini vengono stampate con un metodo tradizionale ai sali d’argento. Simona Galeotto è nata a Torino dove vive e lavora www.simonagaleotti.itTuri Rapisarda, nato a Catania, vive e lavora tra Piemonte e Sicilia.",
+        "Le foto di Simona Galeotti e Turi Rapisarda raccontano di luoghi in cui coesistono molteplici dimensioni. “Fantasmi” che infestano la realtà evocati attraverso figure evanescenti. Siamo dentro un’esperienza carica di visioni, spettri, e storie da raccontare. Con la collaborazione di Oolalala Gallery, progetto artistico nomade.",
       timeRange: "16 - 21",
       artistIds: ["", ""],
     },
@@ -415,7 +416,7 @@ export const PROGRAM = {
       address: "Via Bava 19",
       title: "Videoinstallazione: Oedipus Rex",
       description:
-        "Benvenuti in ViaBava19, due vani e cucina di libera espressione. Dal 2021, una volta al mese, gli spazi di questo tipico “appartamento” di Vanchiglia si aprono a dipinti, fotografie, performance e a tanta bella gente. All’inizio la motivazione era creare una rete artistica e creativa alternativa. Poi è nato Àprile che è il l’esatta manifestazione di quella rete anelata di cui fanno parte molti artisti incontrati quasi per caso anzi per casa",
+        "OEDIPUS REX nasce da Teresa Verrascina e Matilde Panetta in collaborazione con Katia Licenziato. Il cortometraggio è la narrazione dell’ Edipo re di Sofocle, riscritto in flash visivi, tra buio e visioni accecanti. Essere ciechi rispetto a se stessi, non guardare dentro, non essere consapevoli della propria carne e del proprio destino. “Nessun essere mortale possiede arte profetica”. Il corto è stato girato esattamente nel posto in cui lo spettatore potrà esperirlo, nel teatrino di ViaBava19. Scritto e diretto da Teresa Verrascina, Matilde Panetta con la collaborazione di Katia Licenziato. Musiche e produzione audio di Claudio Cardia.",
       timeRange: "16 - 21",
       artistIds: ["", ""],
     },
@@ -445,6 +446,8 @@ export const PROGRAM = {
       address: "Via Giacinto Carena, 10",
       title:
         "Jam murales in casa aperto al pubblico con Yaga, Ghitka, Jacopino, Lisa, Elisa e Milena",
+      description:
+        "Yaga, Ghitka, Jacopino, Lisa, Elisa e Milena sono artisti che lavorano a torino negli ambienti informali. Si esibiranno dipingendo sui muri di Casa Carena in un murales collaborativo aperto al pubblico. Il pubblico potrà partecipare, e i colori saranno messi a disposizione da Yaga. Altre opere degli artisti saranno esposte in vari angoli della casa: librerie, scaffali.",
       timeRange: "16 - 21",
       artistIds: ["", ""],
     },
@@ -588,10 +591,9 @@ export const PROGRAM = {
         houseId: "4",
         houseName: "Casa Mercanti",
         address: "Via Camillo de Lellis, 30",
-        title:
-          "Spettacolo Teatrale: HAPPY LIFE: Estratti di vite a caso” di MALES",
+        title: "Spettacolo Teatrale: HAPPY LIFE: Estratti di vite a caso”",
         description:
-          "Teatro Carillon è una compagnia teatrale e colettivo interdisciplinare nato nel 1983 a Torino, nel quartiere popolare di Barriera di Milano. Dopo decenni dedicati allo sviluppo di linguaggi sperimentali in ambito prettamente teatrale, dal 2015 la compagnia  si è aperta a nuove realtà. In BASA (Barriera Space Agency), dj virtuali accompagnano il tappeto mirabolante di videomapping site specific. Partendo dalla stratificazione di lavori proiettati si genera spontaneamente il dibattito della virtualità nell’arte, metafora del distacco emotivo osservatore-opera. Si tratta di una riflessione sulla perdita di profondità comunicativa ma anche di interazione contaminativa e definizioni di reti interterritoriali",
+          "Un letto. Due attrici, una tournée. Dora e Zoe si svegliano... Ma perché non dormono alle due di notte? Il pubblico ascolta. È invitato? Ovvio che no! Cioè, ti hanno mai invitato in una camera con due persone alle due di notte? Non credo proprio. Ti interessa ascoltare cosa si dicono due sconosciute? Chi è Francesco Da Torre? Sicuro di volerlo scoprire? E cosa c’entra il teatro? Con un linguaggio comico-grottesco e talvolta con note di assurda follia Dora e Zoe apriranno la porta della loro camera d’hotel, mostrandosi così come sono. La compagnia Malament’Espress (MALES) nasce a Firenze nel 2017 da un’idea di Rebecca Benedettini e Valentina Brancale. Scrive, dirige e interpreta propri testi inediti. Esordisce con “Monolo-chi? Monolo-che? Estratti di vite a caso” segnando l’impronta comico-grottesca, tratto identificativo della compagnia. Nel 2019 entra nella compagnia Sofia Busia con “ Waiting for ” una commedia brillante sul tema della corruzione, in collaborazione con l’associazione “Libera contro le mafie” di Sesto Fiorentino (FI); nel 2021 con “L’Ascensore”, un thriller psicologico, la compagnia si esibisce in scena al Teatro dell’Affratellamento (FI) e apre una collaborazione con attori e maestranze tecniche esterne. Nel Settembre 2022 debutta al’Ortyx Drama Festival di Siracusa con “Happy Life, Estratti di vite a caso” una rivisitazione del primo spettacolo.",
         timeRange: "20",
         artistIds: ["", ""],
       },
@@ -675,7 +677,7 @@ export const PROGRAM = {
         address: "Via Milano, 20",
         title: "Piano solo di Ludovico Bellucci",
         description:
-          "@ludovico_bellucci ha 18 anni e suona il pianoforte dall'età di 8. Frequenta il Liceo Musicale Cavour di Torino e si è sempre dedicato alla composizione seguendo un personale estro, ma negli ultimi due anni compone colonne sonore. Ha eseguito dal vivo la colonna sonora da lui ideata per i film Paris qui dort (1925, René Clair) e La caduta di Troia (1911, Giovanni Pastrone). Ha composto la colonna sonora originale del cortometraggio Dura Lex Sed Lex, che si è aggiudicato il premio finale al “believe film festival” di Verona 2022. Si è già esibito al Conservatorio di Torino e alla Cineteca di Karlsrühe (Germania). Ludovico Bellucci è presente su tutti i Digital Store e il suo repertorio include altri brani originali che contraddistinguono il suo stile come Renaissance e Senza Tempo. Quando parla della sua musica la definisce trasognante e retrò, legata al periodo della Belle Èpoque ma non scevra di suggestioni romantiche",
+          "Ludovico Bellucci ha 18 anni e suona il pianoforte dall’età di 8. Frequenta il Liceo Musicale Cavour di Torino e si è sempre dedicato alla composizione seguendo un personale estro, ma negli ultimi due anni compone colonne sonore. Si è già esibito al Conservatorio di Torino e alla Cineteca di Karlsrühe con sonorizzazioni dal vivo dei film “Paris qui dort” (1925) e “La caduta di Troia” (1911). Ha composto la colonna sonora originale del cortometraggio “Dura Lex Sed Lex”, premio finale al “believe film festival” di Verona 2022. È presente su tutti i Digital Store e il suo repertorio include altri brani originali che contraddistinguono il suo stile come “Renaissance” e “Senza Tempo”",
         timeRange: "18.00 - 18.20 e 19.30. - 19.50",
         artistIds: ["", ""],
       },

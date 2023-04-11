@@ -61,3 +61,34 @@ export const listReservations = /* GraphQL */ `
     }
   }
 `;
+export const getBiketour = /* GraphQL */ `
+  query GetBiketour($id: ID!) {
+    getBiketour(id: $id) {
+      id
+      partecipants
+      partecipantPhoneNumbers
+      partecipantsNames
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listBiketours = /* GraphQL */ `
+  query ListBiketours(
+    $filter: ModelBiketourFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listBiketours(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        partecipants
+        partecipantPhoneNumbers
+        partecipantsNames
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
