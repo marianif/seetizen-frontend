@@ -422,7 +422,7 @@ export const PROGRAM = {
     {
       houseId: "3",
       houseName: "Casa Moringa",
-      address: "Via Exilles 84",
+      address: "Via Borgo Dora, 22",
       title: "Esposizione: “0, 2, 4, 8, 1000 ZAMPE” di  Federica Moi",
       description:
         "Federica Moi, classe 1997, apprende presso l’Accademia Albertina di Belle Arti di Torino  tecniche di pittura, disegno tradizionale, illustrazione digitale. Una passione per le tradizioni nel mondo e i miti del passato ispira le sue figure stilizzate dai colori acidi: simboli, metafore e piccole finestre sul suo immaginario.0, 2, 4, 8, 1000 ZAMPE è una serie di illustrazioni realizzate con matite colorate, grafite e china raffiguranti alcuni tra i più noti mostri e animali mitologici ispirati al “Manuale di zoologia fantastica” di Jorge Luis Borges e Margarita Guerrero.",
@@ -432,7 +432,7 @@ export const PROGRAM = {
     {
       houseId: "3",
       houseName: "Casa Moringa",
-      address: "Via Exilles 84",
+      address: "Via Borgo Dora, 22",
       title: "Esposizione: “Taping and typing” di Mattia Maio",
       description:
         "Mattia Maio in arte Matolivetti, classe 1989, intraprende un percorso artistico alla ricerca di mezzi espressivi non convenzionali: tratti distintivi della sua produzione sono macchina da scrivere e scotch da pacchi. Nella performance “Taping and typing” realizza disegni con la macchina da scrivere imprimendo sul foglio le lettere in chiaroscuro. Le opere con il nastro adesivo sono invece il  risultato di vari strati di scotch sagomati con un bisturi e retroilluminati",
@@ -442,16 +442,16 @@ export const PROGRAM = {
     {
       houseId: "6",
       houseName: "Casa Carena",
+      address: "Via Giacinto Carena, 10",
       title:
         "Jam murales in casa aperto al pubblico con Yaga, Ghitka, Jacopino, Lisa, Elisa e Milena",
-      address: "Via Exilles 84",
       timeRange: "16 - 21",
       artistIds: ["", ""],
     },
     {
       houseId: "5",
       houseName: "Apartment Gallery Rooftop",
-      address: "Via Exilles 84",
+      address: "Corso San Maurizio, 61",
       title:
         "Installazione multimediale di Tteus Chiba, Hyperspeed Hallucinations e MoodooM ",
       description:
@@ -462,7 +462,7 @@ export const PROGRAM = {
     {
       houseId: "5",
       houseName: "Apartment Gallery Rooftop",
-      address: "Via Exilles 84",
+      address: "Corso San Maurizio, 61",
       title: "Esposizione delle opere di Contatto Meccano",
       description:
         "Marco Primavera (in arte Contatto Meccano) è un artista poliedrico classe 1984 che, trasferitosi a Torino per motivi di studio, vi intraprende un lungo percorso di crescita artistica segnato dall'incontro con la cultura underground. É evidente nei suoi lavori l'influenza delle avanguardie. Il ritrovamento di una Lettera 22 Olivetti abbandonata e di un manichino portano alle prime creazioni Ready Made sotto forma di sculture. Le opere di Contatto Meccano prendono forma e vita propria, infuse della passione creativa che le porta alla luce, materializzandosi libere da ogni costrizione disciplinare: al di là di scultura, fotografia, grafiche, arredo d'interni",
@@ -473,7 +473,7 @@ export const PROGRAM = {
       houseId: "2",
       houseName: "Piano B",
       address: "Via Milano, 20",
-      title: "Esposizione: “UNFAMILIAR” di Giuseppe Gallace",
+      title: "“UNFAMILIAR” di Giuseppe Gallace",
       description:
         "Il protagonista della pittura di @giuseppe_wallas_gallace sembra essere ciò che non è presente: l’artista sembra voler alludere a qualcosa di mancante, dare forma a quel che forma non ha. Una pittura corposa caratterizzata da una forte matericità racconta ora figure equivoche e indecifrabili ora la dimensione intima dei paesaggi domestici.  Ciò che dovrebbe essere familiare diviene improvvisamente anomalo. Giuseppe Gallace, classe 1993, vive e opera a Torino dal 2016. Cultore della Materia in Pittura, ha collaborato con il MAU e la Pinacoteca Albertina e affianca all’attività di artista quella di insegnante di pittura e disegno.",
       timeRange: "16 - 21",
@@ -483,7 +483,7 @@ export const PROGRAM = {
       houseId: "4",
       houseName: "Casa Mercanti",
       address: "Via Camillo de Lellis, 30",
-      title: "Esposizione: “Trittico della città” + “Inside Turin” di GIBRAH",
+      title: "“Trittico della città” + “Inside Turin” di GIBRAH",
       description:
         "La ricerca del pittore Giuliano Brancale, in arte GIBRAH, da tempo si rivolge alla rappresentazione  degli spazi urbani e degli interni domestici: essi  non sono altro  che la realtà interna, nascosta allo sguardo, dei palazzi e dei condomini.La sua ricerca è iniziata con il Trittico della Città, dipinto interamente dal vero da un appartamento al settimo piano in Barriera di Milano.Oltre al Trittico, esporrà due tele prodotte per l’occasione di due corti interne di altrettante case coinvolte nel festival",
       timeRange: "16 - 21",
@@ -536,7 +536,7 @@ export const PROGRAM = {
       {
         houseId: "3",
         houseName: "Casa Moringa",
-        address: "Via Exilles 84",
+        address: "Via Borgo Dora, 22",
         title: "Performance Verticalista di Manueila",
         description:
           "Manuela Pilloni, in arte Manueila, è una performer alla costante ricerca della genuinità del gesto corporeo. Si diploma al Teatro Fisico nel 2013 e continua la sua formazione artistica su verticalismo, contorsionismo, clown e teatro danza.In occasione del Festival interagirà con l’installazione multimediale di Tteus Chiba, Hyperspeed Hallucinations e MoodooM, diventandone parte integrante. Rappresenterà l'elemento umano, reale, che si intreccia con il digitale e l'analogico",
@@ -546,7 +546,7 @@ export const PROGRAM = {
       {
         houseId: "3",
         houseName: "Casa Moringa",
-        address: "Via Exilles 84",
+        address: "Via Borgo Dora, 22",
         title: "“FantastiK!” di Manuela Pilloni musicata da Jay Happy",
         description:
           "FantastiK! è una performance di Manuela Pilloni musicata da Jay Happy. Il pubblico è chiamato a scegliere dal mazzo una carta raffigurante un essere fantastico e la performer, sulle note della band, lo ricreerà seduta stante. Il risultato è una musica in costante trasformazione, eclettica, che preferisce creare momenti volatili piuttosto che oggetti statici.Manuela Pilloni, in arte @manueila, è una performer alla costante ricerca della genuinità del gesto corporeo. Si diploma al Teatro Fisico nel 2013 e continua la sua formazione artistica su verticalismo, contorsionismo, clown e teatro danza.Jay Happy è il progetto live del collettivo internazionale donezk collective. I brani del collettivo vengono arrangiati e trasfigurati dagli interpreti di turno, ma anche dalla strumentazione e dal contesto",
@@ -556,7 +556,7 @@ export const PROGRAM = {
       {
         houseId: "3",
         houseName: "Casa Moringa",
-        address: "Via Exilles 84",
+        address: "Via Borgo Dora, 22",
         title: "Concerto Live di Jay Happy",
         description:
           "JAY HAPPY non è sempre la stessa persona, ne sempre lestesse persone. Attualmente si lascia interpretare da Julian Happe,polistrumentista cantante e scribacchino tedesco (se gli chiedete di dovevi risponderà ”..mmm da qualche parte nel centro”) e Pietro Pagliana,musicista, cantautore e produttore italico, tristemente piemontese. Ilgruppo ha viaggiato e vissuto in Germania, Francia, Portogallo e altriposti, suonando e cantando per strada, in molteplici bar, teatri, qualchesala concerti, studi e case di amici e conoscenti e spesso anche inparchi e foreste",
