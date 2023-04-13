@@ -129,8 +129,8 @@ const UpdateFlow = ({ CODE }) => {
       <Box
         sx={{
           display: "flex",
-          minWidth: 400,
-          padding: 10,
+          width: "100%",
+          padding: 2,
           alignItems: "center",
           borderRadius: 6,
           flexDirection: "column",
