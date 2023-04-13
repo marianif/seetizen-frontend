@@ -5,8 +5,10 @@ import { listFlows } from "@/src/graphql/queries";
 import { HOUSES } from "@/constants/places";
 import UpdateCard from "@/components/UpdateCard/UpdateCard";
 import { useState, useEffect } from "react";
+import { Box } from "@mui/system";
 
 const UpdateFlow = () => {
+  const [hidden, setHidden] = useState(true);
   const [flows, setFlows] = useState();
   const updateFlowRate = async (id, value) => {
     const input = {
@@ -35,7 +37,11 @@ const UpdateFlow = () => {
     getFlowRate();
   }, []);
 
-  if (flows) {
+  if (hidden) {
+    return <Box></Box>;
+  }
+
+  if (flows && !hidden) {
     return (
       <div>
         {HOUSES.map((house, index) => (

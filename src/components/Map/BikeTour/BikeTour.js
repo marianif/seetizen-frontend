@@ -43,6 +43,11 @@ const BikeTour = () => {
 
   const handleReservation = async (e) => {
     e.preventDefault();
+
+    if (!day || !name) {
+      return;
+    }
+
     const current = tours.find((item) => item.id === day);
     const partecipantsNames = JSON.parse(current.partecipantsNames);
     const partecipantsNumbers = JSON.parse(current.partecipantPhoneNumbers); // mail
@@ -176,6 +181,7 @@ const BikeTour = () => {
               onChange={handleChange}
               style={{ borderColor: "white", color: "black" }}
               placeholder="Seleziona Giorno"
+              required
             >
               <MenuItem
                 disabled={disableButton(BIKE_TOUR[0].id)}
@@ -214,6 +220,7 @@ const BikeTour = () => {
               variant="outlined"
               style={{ marginTop: 10, marginBottom: 10 }}
               onChange={(e) => setName(e.target.value)}
+              required
             />
             <Button variant="contained" onClick={handleReservation}>
               Prenotati!
