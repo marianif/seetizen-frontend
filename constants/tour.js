@@ -12,11 +12,10 @@ export const BIKE_TOUR = [
     id: "2",
     day: "Domenica 16 Aprile",
     program: [
-      "Incontro 15:50 in Piazza Innocenzo Vigliardi Paravia -  ore 16:00 Arrivo Casa Carena",
-      "17:05 Partenza per Via bava 19 – fino alle 18:00",
-      "18:05 partenza per Casa Moringa – fino alle 19:00",
+      "Ritrovo presso via bava 19 ore 16:45 – fino a ore 18:00",
+      "18:05 partenza per casa Moringa – fino alle 19",
       "19:05 Partenza per Casa Piano B – fino alle 19:50",
-      "19:55 Partenza per Casa Moringa – fino alle 21",
+      "19:55 Partenza per Casa Carena – fino alle 21:00",
     ],
   },
 ];

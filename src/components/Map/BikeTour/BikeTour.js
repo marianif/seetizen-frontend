@@ -210,7 +210,7 @@ const BikeTour = () => {
             </Select>
             <TextField
               id="outlined-basic"
-              label="Come dobbiamo chiamarti?"
+              label="Nome e Cognome"
               variant="outlined"
               style={{ marginTop: 10, marginBottom: 10 }}
               onChange={(e) => setName(e.target.value)}
