@@ -62,8 +62,8 @@ const UpdateFlow = () => {
       <Box
         sx={{
           display: "flex",
-          minWidth: 400,
-          padding: 10,
+          width: "100%",
+          padding: 2,
           alignItems: "center",
           borderRadius: 6,
           flexDirection: "column",
@@ -88,7 +88,7 @@ const UpdateFlow = () => {
           size="xl"
           style={{
             backgroundColor: "#fff",
-            width: "90%",
+            width: "100%",
             display: "flex",
             justifyContent: "center",
             padding: 10,
