@@ -9,7 +9,6 @@ import logo from "../../../public/images/aprile-logo.png";
 import styles from "../../../src/styles/components/HouseList.module.css";
 import axios from "axios";
 
-// const PIERGIORGIO = "AIzaSyC6rY5Tc1ED5krXQ_pyhcdd9qVZGM0rcNs";
 const PIERGIORGIO = process.env.GOOGLE_API_KEY;
 
 const containerStyle = {

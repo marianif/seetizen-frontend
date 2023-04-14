@@ -11,7 +11,9 @@ import { Button } from "react-form-elements";
 import Image from "next/image";
 import logo from "../../public/images/aprile-logo.png";
 
-const UpdateFlow = ({ CODE }) => {
+const CODE = process.env.AUTHORIZATION_CODE;
+
+const UpdateFlow = () => {
   const [hidden, setHidden] = useState(true);
   const [code, setCode] = useState(null);
   const [flows, setFlows] = useState();
