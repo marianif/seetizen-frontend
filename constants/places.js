@@ -530,9 +530,9 @@ export const PROGRAM = {
         houseId: "5",
         houseName: "Apartment Gallery Rooftop",
         address: "Corso S. Maurizio, 61",
-        title: "Performance installazione multimediale di Manueila",
+        title: "Tteus Chiba, Hyperspeed Hallucinations e ModooM + Manueila",
         description:
-          "Manuela Pilloni, in arte Manueila, è una performer alla costante ricerca della genuinità del gesto corporeo. Si diploma al Teatro Fisico nel 2013 e continua la sua formazione artistica su verticalismo, contorsionismo, clown e teatro danza.In occasione del Festival interagirà con l’installazione multimediale di Tteus Chiba, Hyperspeed Hallucinations e MoodooM, diventandone parte integrante. Rappresenterà l'elemento umano, reale, che si intreccia con il digitale e l'analogico",
+          "Tteus Chiba, Hyperspeed Hallucinations e ModooM presenteranno le proprie opere integrandole in un’installazione multimediale aperta all’interazione dei presenti, collaborativa e in divenire, capa- ce di trasfigurare le opere degli artisti, le percezioni e i volti. Manuela Pilloni, in arte Manueila, interagirà con l’installazione multime- diale diventandone parte integrante. Rappresenterà l’elemen- to umano, reale, che si intreccia con il digitale e l’analogico.",
         timeRange: "19",
         artistIds: ["", ""],
       },
@@ -633,9 +633,9 @@ export const PROGRAM = {
         houseId: "3",
         houseName: "Casa Moringa",
         address: "Via Borgo Dora, 22",
-        title: "Performance Verticalista di Manueila",
+        title: "Cristian Rodriguez - Spettacolo Acrobatico",
         description:
-          "Manuela Pilloni, in arte Manueila, è una performer alla costante ricerca della genuinità del gesto corporeo. Si diploma al Teatro Fisico nel 2013 e continua la sua formazione artistica su verticalismo, contorsionismo, clown e teatro danza.In occasione del Festival interagirà con l’installazione multimediale di Tteus Chiba, Hyperspeed Hallucinations e MoodooM, diventandone parte integrante. Rappresenterà l'elemento umano, reale, che si intreccia con il digitale e l'analogico",
+          "In occasione del Festival, Casa Moringa ospiterà due spettacoli da capogiro (...letteralmente!). Il verticalista Cristian Rodriguez* si esibirà in una breve performan- ce che trasforma il movimento, la fluidità e la tranquillità dell’e- quilibrio in uno strumento per esprimere la capacità dell’uomo di fondersi con l’ambiente che lo circonda. Manuela Pilloni, in arte Manueila, performer alla co- stante ricerca della genuinità del gesto corporeo, si esibirà a Casa Moringa in un breve saggio dei suoi talenti.",
         timeRange: "16.30",
         artistIds: ["", ""],
       },
