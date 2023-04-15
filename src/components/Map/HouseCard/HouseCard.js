@@ -44,7 +44,7 @@ const HouseCard = ({ house, flow }) => {
             {flow === 1
               ? "Spazio Libero"
               : flow === 2
-              ? "Sia sta affollando"
+              ? "Si sta affollando"
               : flow === 3 && "Affollato"}
           </p>
           <span
@@ -87,8 +87,10 @@ const HouseCard = ({ house, flow }) => {
           </div>
           <h2 className="text-white">{house.houseName}</h2>
         </Box>
+        <p className="p-light p-sm" style={{fontFamily: 'prompt'}}>{house.address}</p>
 
-        <p className="p-light p-sm">{house.description}</p>
+        <p className="p-light p-sm" >{house.description}</p>
+
       </CardContent>
 
       <Collapse in={expanded} timeout="auto" unmountOnExit>
