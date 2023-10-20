@@ -1,5 +1,4 @@
 import React from "react";
-import ZooMap from "./zoo-map";
 import ZooHistory from "./zoo-history";
 
 function Home() {
