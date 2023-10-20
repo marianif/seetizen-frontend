@@ -36,8 +36,6 @@ import twentyEight from "/public/images/zoo/28.jpg";
 import twentyNine from "/public/images/zoo/29.jpg";
 import thirty from "/public/images/zoo/30.jpg";
 
-import { captions } from "./const";
-
 import "../../styles/Home.module.css";
 import Image from "next/image";
 import { useRouter } from "next/router";
