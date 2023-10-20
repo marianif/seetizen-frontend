@@ -1,0 +1,26 @@
+[
+  {
+    "id": "vasca delle otarie",
+    "name": "vasca delle otarie",
+    "lat": 45.06471029788393,
+    "lng": 7.700893733495314
+  },
+  {
+    "id": "casa delle scimmie",
+    "name": "casa delle scimmie",
+    "lat": 45.06570456692141,
+    "lng": 7.703188726949158
+  },
+  {
+    "name": "gabbia delle tigri",
+    "id": "gabbia delle tigri",
+    "lat": 45.065996862706264,
+    "lng": 703138258097676
+  },
+  {
+    "id": "rettilario",
+    "name": "rettilario",
+    "lat": 45.06653735675032,
+    "lng": 7.7049103527037595
+  }
+]

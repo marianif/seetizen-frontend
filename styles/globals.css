@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,400;0,6..12,500;0,6..12,700;0,6..12,900;1,6..12,300;1,6..12,600&family=Oswald:wght@600;700&family=Syne+Mono&display=swap");
 html,
 body {
   padding: 0;
@@ -13,6 +14,18 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.zoo-history-wrapper {
+  background-image: url("/public/images/bg-michelotti.jpeg") !important;
+}
+
+p {
+  color: black;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 @media (prefers-color-scheme: dark) {

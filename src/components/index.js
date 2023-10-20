@@ -12,6 +12,7 @@ import UserDialog from "./AppHeader/UserDialog/UserDialog";
 import CustomAlert from "./CustomAlert";
 import MenuLink from "./AppHeader/UserDialog/MenuLink/MenuLink";
 import Header from "./Header";
+import HistoryCard from "./HistoryCard/HistoryCard";
 export {
   Layout,
   MarkdownBar,
@@ -27,4 +28,5 @@ export {
   CustomAlert,
   MenuLink,
   Header,
+  HistoryCard,
 };

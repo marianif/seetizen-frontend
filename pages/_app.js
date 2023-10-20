@@ -1,4 +1,4 @@
-import "../src/styles/globals.css";
+import "/styles/globals.css";
 import { store } from "../src/store/store";
 import { Provider } from "react-redux";
 import Amplify from "aws-amplify";
