@@ -41,15 +41,12 @@ export default function HistoryCard({ item, onReadPress, onFindPress, index }) {
           variant="body2"
           color="text.secondary"
         >
-          {item.content.slice(0, 150)}
+          {item.content.slice(0, 200) + "..."}
         </Typography>
       </CardContent>
       <CardActions>
         <Button variant="contained" size="small" onClick={onReadPress}>
           Leggi la storia
-        </Button>
-        <Button size="small" variant="outlined" onClick={onFindPress}>
-          Scopri nel parco
         </Button>
       </CardActions>
     </Card>

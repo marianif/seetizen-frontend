@@ -1,5 +1,6 @@
 import React from "react";
 import ZooHistory from "./zoo-history";
+import ZooMap from "./zoo-map";
 
 function Home() {
   return (
@@ -10,7 +11,7 @@ function Home() {
         backgroundColor: "white",
       }}
     >
-      <ZooHistory />
+      <ZooMap />
     </div>
   );
 }

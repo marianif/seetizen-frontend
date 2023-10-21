@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { Button } from "@mui/material";
 import zoo_history from "@/data/zoo-history.json";
 import { HistoryCard } from "@/components/index";
+import { IconButton } from "@mui/material";
 
 import bg from "/public/images/bg-michelotti.jpeg";
 import one from "/public/images/zoo/1.png";
@@ -35,6 +36,9 @@ import twentySeven from "/public/images/zoo/27.jpg";
 import twentyEight from "/public/images/zoo/28.jpg";
 import twentyNine from "/public/images/zoo/29.jpg";
 import thirty from "/public/images/zoo/30.jpg";
+
+import { IconMapPinCode } from "@tabler/icons-react";
+import { IconPhoto } from "@tabler/icons-react";
 
 import "../../styles/Home.module.css";
 import Image from "next/image";
@@ -73,12 +77,44 @@ const list = [
   thirty,
 ];
 
+const sam_list = [
+  seven,
+  eight,
+  nine,
+  ten,
+  eleven,
+  thirteen,
+  fourteen,
+  fifteen,
+  sixteen,
+  seventeen,
+  eighteen,
+  nineteen,
+  twenty,
+  twentyOne,
+  twentySeven,
+  twentyEight,
+];
+
 function ZooHistory() {
   const router = useRouter();
   const [item, setItem] = useState();
   const [showArchive, setShowArchive] = useState(false);
+  const [shown, setShown] = useState(false);
 
   const showBack = item || showArchive;
+
+  const { data } = router.query;
+
+  // Parse the string back to an object
+  const el = data ? JSON.parse(data) : null;
+
+  useEffect(() => {
+    if (el && !shown) {
+      setItem(el);
+      setShown(true);
+    }
+  }, [el, shown]);
 
   const handleBack = () => {
     if (item) {
@@ -194,6 +230,30 @@ function ZooHistory() {
             </p>
             {item.content}
           </p>
+          {item.id === 3 &&
+            sam_list.map((item, i) => (
+              <div
+                key={i}
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "auto",
+                }}
+              >
+                <Image src={item} />
+              </div>
+            ))}
+          {item.id === 9 && (
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "auto",
+              }}
+            >
+              <Image src={twentyNine} />
+            </div>
+          )}
         </div>
       )}
       {!item && showArchive && (
@@ -257,18 +317,19 @@ function ZooHistory() {
           }}
         >
           <Button
+            onClick={() => router.push("/zoo-map")}
+            variant="contained"
+            startIcon={<IconMapPinCode />}
+          >
+            Vai alla Mappa
+          </Button>
+          <Button
+            startIcon={<IconPhoto />}
             variant="outlined"
             size="small"
             onClick={() => setShowArchive(true)}
           >
             {"Archivio fotografico"}
-          </Button>
-          <Button
-            variant="contained"
-            size="small"
-            onClick={() => router.push("/zoo-map")}
-          >
-            {"Vai alla mappa"}
           </Button>
         </div>
       )}
@@ -293,7 +354,7 @@ function ZooHistory() {
             color="black"
             size={30}
           />
-          <p
+          <span
             style={{
               fontFamily: "Indie Flower",
               color: "#222",
@@ -303,7 +364,7 @@ function ZooHistory() {
             }}
           >
             Torna indietro
-          </p>
+          </span>
         </div>
       )}
     </div>

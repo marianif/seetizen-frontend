@@ -3,9 +3,11 @@ import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import { MAP_STYLE } from "@/constants/map";
 import { MarkerF, InfoWindow } from "@react-google-maps/api";
 import { useRouter } from "next/router";
+import { Button } from "@mui/material";
 
 import zoo from "@/data/zoo-history.json";
 import { Container } from "@mui/material";
+import Link from "next/link";
 
 const PIERGIORGIO = process.env.GOOGLE_API_KEY;
 
@@ -14,19 +16,29 @@ const containerStyle = {
   height: "100%",
 };
 
-const center = {
+const _center = {
   lat: 45.06573830851288,
   lng: 7.702802739241693,
 };
 
 function ZooMap() {
   const [user, setUser] = useState();
+  const [center, setCenter] = useState(_center);
 
   const router = useRouter();
   const { data } = router.query;
 
   // Parse the string back to an object
   const item = data ? JSON.parse(data) : null;
+
+  useEffect(() => {
+    if (item) {
+      setCenter({
+        lat: item.lat,
+        lng: item.lng,
+      });
+    }
+  }, [item]);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(({ coords }) =>
@@ -36,6 +48,13 @@ function ZooMap() {
       })
     );
   }, []);
+
+  const handleNavigation = (item) => {
+    router.push({
+      pathname: "/zoo-history",
+      query: { data: JSON.stringify(item) },
+    });
+  };
 
   return (
     <div
@@ -78,7 +97,7 @@ function ZooMap() {
                 lat: item.lat,
                 lng: item.lng,
               }}
-              onClick={(evt) => console.log(evt)}
+              onClick={() => handleNavigation(item)}
             >
               <InfoWindow
                 options={{
@@ -134,11 +153,34 @@ function ZooMap() {
                   }}
                   position={{ lat: item.lat, lng: item.lng }}
                   key={item.id}
+                  onClick={() => handleNavigation(item)}
                 />
               );
             })}
         </GoogleMap>
       </LoadScript>
+      <div
+        style={{
+          position: "fixed",
+          bottom: 0,
+          width: "100vw",
+          backgroundColor: "white",
+          color: "#020202",
+          display: "flex",
+          justifyContent: "space-around",
+          padding: 10,
+        }}
+      >
+        {!item && (
+          <Button
+            variant="contained"
+            size="small"
+            onClick={() => router.push("/zoo-history")}
+          >
+            {"Vai alla storia del parco"}
+          </Button>
+        )}
+      </div>
     </div>
   );
 }
