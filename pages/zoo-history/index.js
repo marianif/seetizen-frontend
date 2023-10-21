@@ -36,6 +36,9 @@ import twentySeven from "/public/images/zoo/27.jpg";
 import twentyEight from "/public/images/zoo/28.jpg";
 import twentyNine from "/public/images/zoo/29.jpg";
 import thirty from "/public/images/zoo/30.jpg";
+import thirtyThree from "/public/images/zoo/33.jpg";
+import thirtyFour from "/public/images/zoo/34.jpg";
+import thirtyFive from "/public/images/zoo/35.jpg";
 
 import { IconMapPinCode } from "@tabler/icons-react";
 import { IconPhoto } from "@tabler/icons-react";
@@ -48,6 +51,9 @@ const list = [
   one,
   two,
   three,
+  thirtyThree,
+  thirtyFour,
+  thirtyFive,
   four,
   five,
   six,
@@ -95,6 +101,7 @@ const sam_list = [
 ];
 
 const taz_list = [twentySeven, twentyEight];
+const tiger_list = [thirtyThree, thirtyFour, thirtyFive];
 
 function ZooHistory() {
   const router = useRouter();
@@ -230,6 +237,19 @@ function ZooHistory() {
             </p>
             {item.content}
           </p>
+          {item.id === 7 &&
+            tiger_list.map((item, i) => (
+              <div
+                key={i}
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "auto",
+                }}
+              >
+                <Image src={item} />
+              </div>
+            ))}
           {item.id === 8 &&
             taz_list.map((item, i) => (
               <div
