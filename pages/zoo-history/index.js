@@ -36,9 +36,11 @@ import twentySeven from "/public/images/zoo/27.jpg";
 import twentyEight from "/public/images/zoo/28.jpg";
 import twentyNine from "/public/images/zoo/29.jpg";
 import thirty from "/public/images/zoo/30.jpg";
+import thirtyOne from "/public/images/zoo/31.jpg";
 import thirtyThree from "/public/images/zoo/33.jpg";
 import thirtyFour from "/public/images/zoo/34.jpg";
 import thirtyFive from "/public/images/zoo/35.jpg";
+import thirtySix from "/public/images/zoo/36.jpg";
 
 import { IconMapPinCode } from "@tabler/icons-react";
 import { IconPhoto } from "@tabler/icons-react";
@@ -250,6 +252,83 @@ function ZooHistory() {
                 <Image src={item} />
               </div>
             ))}
+          {item.id === 12 && (
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "auto",
+              }}
+            >
+              <Image src={thirtySix} />
+            </div>
+          )}
+          {item.id === 1 && (
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "auto",
+              }}
+            >
+              <Image src={one} />
+            </div>
+          )}
+          {item.id === 2 && (
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "auto",
+              }}
+            >
+              <Image src={five} />
+            </div>
+          )}
+          {item.id === 11 && (
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "auto",
+              }}
+            >
+              <Image src={thirtyOne} />
+            </div>
+          )}
+          {item.id === 4 && (
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "auto",
+              }}
+            >
+              <Image src={twentyTwo} />
+            </div>
+          )}
+          {item.id === 5 && (
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "auto",
+              }}
+            >
+              <Image src={twentyThree} />
+            </div>
+          )}
+          {item.id === 6 && (
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "auto",
+              }}
+            >
+              <Image src={thirty} />
+            </div>
+          )}
           {item.id === 8 &&
             taz_list.map((item, i) => (
               <div
