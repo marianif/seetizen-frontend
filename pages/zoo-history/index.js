@@ -92,9 +92,9 @@ const sam_list = [
   nineteen,
   twenty,
   twentyOne,
-  twentySeven,
-  twentyEight,
 ];
+
+const taz_list = [twentySeven, twentyEight];
 
 function ZooHistory() {
   const router = useRouter();
@@ -230,6 +230,32 @@ function ZooHistory() {
             </p>
             {item.content}
           </p>
+          {item.id === 8 &&
+            taz_list.map((item, i) => (
+              <div
+                key={i}
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "auto",
+                }}
+              >
+                <Image src={item} />
+              </div>
+            ))}
+          {item.id === 3 &&
+            sam_list.map((item, i) => (
+              <div
+                key={i}
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "auto",
+                }}
+              >
+                <Image src={item} />
+              </div>
+            ))}
           {item.id === 3 &&
             sam_list.map((item, i) => (
               <div
